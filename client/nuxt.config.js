@@ -62,7 +62,7 @@ module.exports = {
 
   build: {
     extractCSS: true,
-    vendor: ["jquery"],
+    vendor: ["jquery", "vuetify"],
     plugins: [
 
       new webpack.ProvidePlugin({
