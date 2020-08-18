@@ -97,8 +97,11 @@ import AddressComponent from "@/components/seamen/profile/AddressComponent";
 import EducationDocument from "@/components/seamen/profile/EducationDocument";
 import CourseList from "@/components/seamen/profile/CourseList";
 import Experience from "@/components/seamen/profile/Experience";
-
+import { mapGetters } from "vuex";
 export default {
+  head() {
+    return { title: this.$t("home") };
+  },
   layout: "main",
   middleware: "role",
   components: {

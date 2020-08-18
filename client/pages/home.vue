@@ -682,7 +682,7 @@ import { loadMessages } from "~/plugins/i18n";
 
 export default {
   layout: "home",
-  middleware: "role",
+  
   head: {
     title: "home",
     script: [
