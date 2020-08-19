@@ -2,6 +2,7 @@ require('dotenv').config()
 const { join } = require('path')
 const { copySync, removeSync } = require('fs-extra')
 const webpack = require('webpack')
+import colors from 'vuetify/es5/util/colors'
 
 module.exports = {
   //mode: 'universal', // Comment this for SSR
@@ -62,7 +63,7 @@ module.exports = {
 
   build: {
     extractCSS: true,
-    vendor: ["jquery", "vuetify"],
+    vendor: ["jquery"],
     plugins: [
 
       new webpack.ProvidePlugin({
@@ -76,8 +77,26 @@ module.exports = {
   buildModules: [
 
     // With options
-    ['@nuxtjs/vuetify', { /* module options */ }]
+    ['@nuxtjs/vuetify']
   ],
+
+  vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    theme: {
+      dark: false,
+      themes: {
+        dark: {
+          primary: colors.blue.darken2,
+          accent: colors.grey.darken3,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+        },
+      },
+    },
+  },
 
   hooks: {
     generate: {
