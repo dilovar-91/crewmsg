@@ -59,7 +59,7 @@
 </template>
 <script>
 export default {
-  layout: "main",
+  layout: "seamen",
   data: () => ({
     links: [
       {

@@ -36,6 +36,7 @@
 import Form from "vform";
 
 export default {
+  layout: "seamen",
   head() {
     return { title: this.$t("reset_password") };
   },

@@ -38,5 +38,11 @@
   "verify_email_address": "Wir haben Ihnen eine E-Mail mit dem Bestätigungslink gesendet.",
   "seamen": {
     "vacancy": "freie Stelle"
+  },
+  "home_page": {
+    "home": "Startseite",
+    "for_companies": "Für Unternehmen",
+    "for_sailors": "für Meeresfrüchte",
+    "home_description": "SCHNELLER START IHRER KARRIERE AM MEER"
   }
 }

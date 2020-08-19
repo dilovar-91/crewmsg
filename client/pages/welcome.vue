@@ -28,7 +28,7 @@
 import { mapGetters } from "vuex";
 
 export default {
-  layout: "main",
+  layout: "seamen",
 
   head() {
     return { title: this.$t("home") };

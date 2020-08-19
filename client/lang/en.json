@@ -38,5 +38,11 @@
   "verify_email_address": "We sent you an email with an the verification link.",
   "seamen": {
     "vacancy": "Vacancy"
+  },
+  "home_page": {
+    "home": "Home",
+    "for_companies": "For Companies",
+    "for_sailors": "For Sailors",
+    "home_description": "QUICK START OF YOUR CAREER AT SEA"
   }
 }

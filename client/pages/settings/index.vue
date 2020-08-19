@@ -23,25 +23,26 @@
 
 <script>
 export default {
-  middleware: 'auth',
+  layout: "seamen",
+  middleware: "auth",
 
   computed: {
-    tabs () {
+    tabs() {
       return [
         {
-          icon: 'user',
-          name: this.$t('profile'),
-          route: 'settings.profile'
+          icon: "user",
+          name: this.$t("profile"),
+          route: "settings.profile",
         },
         {
-          icon: 'lock',
-          name: this.$t('password'),
-          route: 'settings.password'
-        }
-      ]
-    }
-  }
-}
+          icon: "lock",
+          name: this.$t("password"),
+          route: "settings.password",
+        },
+      ];
+    },
+  },
+};
 </script>
 
 <style>

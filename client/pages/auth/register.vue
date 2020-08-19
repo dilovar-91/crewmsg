@@ -67,7 +67,8 @@
 <script>
 import axios from "axios";
 export default {
-  layout: "login",
+  layout: "simple",
+  
   head() {
     return { title: this.$t("register") };
   },

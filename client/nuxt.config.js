@@ -63,6 +63,7 @@ module.exports = {
 
   build: {
     extractCSS: true,
+    standalone: true,
     vendor: ["jquery"],
     plugins: [
 

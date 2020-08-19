@@ -9,7 +9,13 @@
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+              <input
+                v-model="form.email"
+                :class="{ 'is-invalid': form.errors.has('email') }"
+                class="form-control"
+                type="email"
+                name="email"
+              />
               <has-error :form="form" field="email" />
             </div>
           </div>
@@ -17,9 +23,7 @@
           <!-- Submit Button -->
           <div class="form-group row">
             <div class="col-md-9 ml-md-auto">
-              <v-button :loading="form.busy">
-                {{ $t('send_verification_link') }}
-              </v-button>
+              <v-button :loading="form.busy">{{ $t('send_verification_link') }}</v-button>
             </div>
           </div>
         </form>
@@ -29,36 +33,37 @@
 </template>
 
 <script>
-import Form from 'vform'
+import Form from "vform";
 
 export default {
-  middleware: 'guest',
+  layout: "seamen",
+  middleware: "guest",
 
-  metaInfo () {
-    return { title: this.$t('verify_email') }
+  metaInfo() {
+    return { title: this.$t("verify_email") };
   },
 
   data: () => ({
-    status: '',
+    status: "",
     form: new Form({
-      email: ''
-    })
+      email: "",
+    }),
   }),
 
-  created () {
+  created() {
     if (this.$route.query.email) {
-      this.form.email = this.$route.query.email
+      this.form.email = this.$route.query.email;
     }
   },
 
   methods: {
-    async send () {
-      const { data } = await this.form.post('/email/resend')
+    async send() {
+      const { data } = await this.form.post("/email/resend");
 
-      this.status = data.status
+      this.status = data.status;
 
-      this.form.reset()
-    }
-  }
-}
+      this.form.reset();
+    },
+  },
+};
 </script>

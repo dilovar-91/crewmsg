@@ -45,7 +45,7 @@
 </template>
 <script>
 export default {
-  layout: "main",
+  layout: "seamen",
   middleware: "role",
   components: {},
   data: () => ({

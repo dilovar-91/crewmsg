@@ -102,7 +102,7 @@ export default {
   head() {
     return { title: this.$t("home") };
   },
-  layout: "main",
+  layout: "seamen",
   middleware: "role",
   components: {
     detail,

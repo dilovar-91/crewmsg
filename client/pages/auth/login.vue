@@ -2,7 +2,7 @@
   <v-row align="center" justify="center">
     <v-col cols="12" sm="10" md="5">
       <v-card class="elevation-12">
-        <v-toolbar color="primary" dark flat>
+        <v-toolbar color="primary" flat>
           <v-toolbar-title>{{ $t('login')}}</v-toolbar-title>
           <v-spacer></v-spacer>
         </v-toolbar>
@@ -19,10 +19,9 @@
               v-model="form.email"
               name="login"
               :rules="emailRules"
-              required
               prepend-icon="mdi-account"
-              autocomplete="off"
-              type="text"
+              type="email"
+              required
             ></v-text-field>
 
             <v-text-field
@@ -78,7 +77,8 @@
 import Form from "vform";
 
 export default {
-  layout: "login",
+  layout: "simple",
+  
   head() {
     return { title: this.$t("login") };
   },

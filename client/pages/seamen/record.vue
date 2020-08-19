@@ -25,7 +25,7 @@
 <script>
 import RecordComponent from "@/components/seamen/interview/RecordComponent.vue";
 export default {
-  layout: "main",
+  layout: "seamen",
   middleware: "role",
   components: { RecordComponent },
   data: () => ({
