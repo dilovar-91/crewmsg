@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('{path}', function () {
+Route::any('{all}', function () {
     return file_get_contents(public_path('_nuxt/index.html'));
-})->where('path', '(.*)');
+})->where('all', '^(?!api).*$');
