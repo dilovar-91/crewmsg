@@ -13,7 +13,7 @@ module.exports = {
   srcDir: __dirname,
 
   env: {
-    apiUrl: process.env.API_URL || process.env.APP_URL + '/api',
+    apiUrl: process.env.apiUrl || process.env.APP_URL + '/api',
     appName: process.env.APP_NAME || 'CrewMsg',
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
