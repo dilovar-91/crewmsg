@@ -49,6 +49,7 @@ module.exports = {
     '~plugins/vform',
     '~plugins/axios',
     '~plugins/fontawesome',
+    '~plugins/base',
     '~plugins/nuxt-client-init', // Comment this for SSR
     { src: '~plugins/vuelidate', mode: 'client' },
     { src: "~plugins/vue-quill-editor", ssr: false },
@@ -85,17 +86,12 @@ module.exports = {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
+      light: {
+        primary: '#42a5f6',
+        secondary: '#050b1f',
+        accent: '#204165',
       },
+
     },
   },
 

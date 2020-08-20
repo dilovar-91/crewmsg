@@ -17,6 +17,7 @@ const routes = [
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
   { path: '/welcome', name: 'welcome', component: page('welcome.vue') },
+  { path: '/main', name: 'main', component: page('main.vue') },
   {
     path: '/settings',
     component: page('settings/index.vue'),

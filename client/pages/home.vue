@@ -1367,13 +1367,18 @@ import { loadMessages } from "~/plugins/i18n";
 export default {
   head: {
     title: "home",
-    script: [
-      {
-        src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
-      },
+    script: [     
       {
         src:
-          "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js",
+          "/js/jquery-3.4.1.min.js",
+       
+      },
+       {
+        src: "/js/webfont.js",
+        
+      },
+      {
+        src: "/js/webflow.js",
         defer: true,
       },
       {
