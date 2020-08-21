@@ -8,6 +8,10 @@ const page = path => () => import(`~/pages/${path}`).then(m => m.default || m)
 
 const routes = [
   { path: '/', name: 'home', component: page('home.vue') },
+  { path: '/about', name: 'about', component: page('about.vue') },
+  { path: '/companies', name: 'companies', component: page('companies.vue') },
+  { path: '/sailors', name: 'sailors', component: page('sailors.vue') },
+
 
   { path: '/login', name: 'login', component: page('auth/login.vue') },
   { path: '/register', name: 'register', component: page('auth/register.vue') },
@@ -17,7 +21,7 @@ const routes = [
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
   { path: '/welcome', name: 'welcome', component: page('welcome.vue') },
-  { path: '/main', name: 'main', component: page('main.vue') },
+
   {
     path: '/settings',
     component: page('settings/index.vue'),

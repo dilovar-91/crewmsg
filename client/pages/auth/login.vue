@@ -2,7 +2,7 @@
   <v-row align="center" justify="center">
     <v-col cols="12" sm="10" md="5">
       <v-card class="elevation-12">
-        <v-toolbar color="primary" flat>
+        <v-toolbar color="primary white--text" flat>
           <v-toolbar-title>{{ $t('login')}}</v-toolbar-title>
           <v-spacer></v-spacer>
         </v-toolbar>
@@ -35,16 +35,17 @@
             ></v-text-field>
           </v-card-text>
           <v-card-actions>
-            <v-spacer></v-spacer>
-            <checkbox v-model="remember" name="remember">{{ $t('remember_me') }}</checkbox>
+            <v-checkbox class="mt-0" v-model="remember" :label="$t('remember_me')"></v-checkbox>
 
             <router-link
               :to="{ name: 'password.request' }"
-              class="small ml-auto my-auto"
+              class="ml-2 mb-4"
             >{{ $t('forgot_password') }}</router-link>
+            <v-spacer></v-spacer>
             <v-btn
               :disabled="!valid"
               color="primary"
+              class="mt-0"
               :loading="form.busy"
               @click="login()"
               form="login-form"
@@ -78,7 +79,7 @@ import Form from "vform";
 
 export default {
   layout: "simple",
-  
+
   head() {
     return { title: this.$t("login") };
   },
@@ -135,7 +136,12 @@ export default {
       await this.$store.dispatch("auth/fetchUser");
 
       // Redirect home.
-      this.$router.push("/" + data.role);
+      this.$router.push("/" + (data.role || "")).catch((error) => {
+        if (error.name != "NavigationDuplicated") {
+          throw error;
+        }
+        console.log(error);
+      });
     },
 
     showSnack(type, text) {

@@ -85,7 +85,7 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      { icon: "mdi-home", text: "Главная", url: "/" },
+      { icon: "mdi-home", text: "Главная", url: "test" },
       {
         icon: "mdi-chevron-up",
         "icon-alt": "mdi-chevron-down",

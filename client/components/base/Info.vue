@@ -1,63 +1,58 @@
 <template>
   <v-theme-provider :dark="dark">
     <div>
-      <base-img
-        src="/img/zero-logo-dark.svg"
-        contain
-        max-width="128"
-        min-height="78"
-        width="100%"
-      />
+      <div class="d-flex justify-center mb-4">
+        <v-img
+          max-width="128"
+          min-height="45"
+          position="center"
+          width="100%"
+          src="/images/logo.png"
+        ></v-img>
+      </div>
 
       <base-title
         size="body-1"
+        class="d-flex justify-center"
         space="4"
         title="MULTI-PURPOSE THEME"
         weight="regular"
       />
 
-      <base-body>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur quidem, quis modi iure nihil commodi suscipit, corporis dicta adipisci, voluptatum quia cupiditate. Nulla minus voluptatum nostrum deleniti, asperiores facere.
-      </base-body>
+      <base-body>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur.</base-body>
 
-      <base-btn
-        class="mb-12"
-        color="white"
-        outlined
-      >
-        More Info
-      </base-btn>
+      <v-btn class="mb-4" color="primary" to="/about">More Info</v-btn>
     </div>
   </v-theme-provider>
 </template>
 
 <script>
-  export default {
-    name: 'BaseInfo',
+export default {
+  name: "BaseInfo",
 
-    props: {
-      title: String,
-      dark: Boolean,
-    },
+  props: {
+    title: String,
+    dark: Boolean,
+  },
 
-    data: () => ({
-      business: [
-        {
-          icon: 'mdi-map-marker-outline',
-          title: 'Address',
-          text: '8553 N. Beach St. Ste. 227<br>Fort Worth, Texas 76137',
-        },
-        {
-          icon: 'mdi-cellphone',
-          title: 'Phone',
-          text: '01 (800) 433 744<br>01 (800) 433 633',
-        },
-        {
-          icon: 'mdi-email',
-          title: 'Email',
-          text: 'john@vuetifyjs.com<br>heather@vuetifyjs.com',
-        },
-      ],
-    }),
-  }
+  data: () => ({
+    business: [
+      {
+        icon: "mdi-map-marker-outline",
+        title: "Address",
+        text: "8553 N. Beach St. Ste. 227<br>Fort Worth, Texas 76137",
+      },
+      {
+        icon: "mdi-cellphone",
+        title: "Phone",
+        text: "01 (800) 433 744<br>01 (800) 433 633",
+      },
+      {
+        icon: "mdi-email",
+        title: "Email",
+        text: "john@vuetifyjs.com<br>heather@vuetifyjs.com",
+      },
+    ],
+  }),
+};
 </script>

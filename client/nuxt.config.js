@@ -1,8 +1,7 @@
 require('dotenv').config()
 const { join } = require('path')
 const { copySync, removeSync } = require('fs-extra')
-const webpack = require('webpack')
-import colors from 'vuetify/es5/util/colors'
+
 
 module.exports = {
   //mode: 'universal', // Comment this for SSR
@@ -40,7 +39,7 @@ module.exports = {
 
   css: [
     // { src: '~assets/sass/app.scss', lang: 'scss' }
-    '~static/css/style.css',
+
   ],
 
   plugins: [
@@ -60,24 +59,21 @@ module.exports = {
     '@nuxtjs/router',
 
   ],
-
+  proxy: {
+    '/api': {
+      target: 'http://test',
+      pathRewrite: {
+        '^/api': '/'
+      }
+    },
+  },
 
   build: {
     extractCSS: true,
     standalone: true,
-    vendor: ["jquery"],
-    plugins: [
-
-      new webpack.ProvidePlugin({
-        jQuery: 'jquery',
-        $: 'jquery',
-        'window.jQuery': 'jquery',
-      }),
-    ],
   },
 
   buildModules: [
-
     // With options
     ['@nuxtjs/vuetify']
   ],

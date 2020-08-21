@@ -9,7 +9,7 @@
     </v-col>
     <v-col cols="12" class="mt-5">
       <v-card class="mx-auto">
-        <v-app-bar class="grey lighten-5" elevate-on-scroll scroll-target="#scrolling-techniques-7">
+        <v-app-bar class="grey lighten-5">
           <v-toolbar-title>Feedback</v-toolbar-title>
 
           <v-spacer></v-spacer>

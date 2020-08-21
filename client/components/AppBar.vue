@@ -1,13 +1,7 @@
 <template>
   <div>
     <v-app-bar id="home-app-bar" app dark elevation="1" class="appstyle" height="90">
-      <base-img
-        src="/images/5e0fd4664b55b08aeb293a0d_logo.png"
-        class="ml-5 mr-2"
-        contain
-        max-width="52"
-        width="100%"
-      />
+      <base-img src="/images/logo.png" class="ml-5 mr-2" contain max-width="52" width="100%" />
       <h3 class="white--text">CrewMSG</h3>
 
       <v-spacer />

@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer absolute temporary v-bind="$attrs" v-on="$listeners">
+  <v-navigation-drawer fixed temporary v-bind="$attrs" v-on="$listeners">
     <v-list>
       <v-list-item
         v-for="name in items"

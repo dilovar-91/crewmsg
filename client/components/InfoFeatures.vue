@@ -1,13 +1,12 @@
 <template>
   <base-info-card title="Features">
-    <a
-      v-for="feature in features"
-      :key="feature"
-      :text="feature"
+    <nuxt-link class="mb-8 grey--text body-1 d-block text-none" to="/sailors">&rsaquo; For Sailors</nuxt-link>
+    <nuxt-link
       class="mb-8 grey--text body-1 d-block text-none"
-      href="#"
-      v-html="`&rsaquo; ${feature}`"
-    />
+      to="/companies"
+    >&rsaquo; For Companies</nuxt-link>
+    <nuxt-link class="mb-8 grey--text body-1 d-block text-none" to="/login">&rsaquo; Login</nuxt-link>
+    <nuxt-link class="mb-8 grey--text body-1 d-block text-none" to="/about">&rsaquo; About Us</nuxt-link>
   </base-info-card>
 </template>
 
