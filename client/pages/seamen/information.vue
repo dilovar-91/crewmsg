@@ -49,7 +49,7 @@
             <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.</v-card-subtitle>
 
             <v-card-actions>
-              <v-btn text>Detail</v-btn>
+              <v-btn to="/seamen/interview/record/1" text>Detail</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>

@@ -41,6 +41,7 @@ const routes = [
   { path: '/seamen/vacancies', name: 'seamen.vacancies', component: page('seamen/vacancies.vue') },
   { path: '/seamen/information', name: 'seamen.information', component: page('seamen/information.vue') },
   { path: '/seamen/interview/record/:id', name: 'seamen.interview.record', component: page('seamen/record.vue') },
+  { path: '/seamen/test', name: 'seamen.interview.test', component: page('seamen/test.vue') },
 
 
 

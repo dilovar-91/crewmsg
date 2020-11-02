@@ -4,7 +4,8 @@ const { copySync, removeSync } = require('fs-extra')
 
 
 module.exports = {
-  //mode: 'universal', // Comment this for SSR
+  mode: 'spa', // Comment this for SSR
+  
   server: {
     //port: process.env.APP_PORT || 9000, // default: 3000
     //host: '0.0.0.0', // default: localhost
@@ -52,6 +53,7 @@ module.exports = {
     '~plugins/nuxt-client-init', // Comment this for SSR
     { src: '~plugins/vuelidate', mode: 'client' },
     { src: "~plugins/vue-quill-editor", ssr: false },
+    //{ src: "~plugins/record-plugins", ssr: false },
 
   ],
 

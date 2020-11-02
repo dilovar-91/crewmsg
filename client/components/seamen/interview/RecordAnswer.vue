@@ -60,7 +60,15 @@
 
 <script>
 import _ from "lodash";
+import "video.js/dist/video-js.css";
+import "videojs-record/dist/css/videojs.record.css";
 
+import "webrtc-adapter";
+import RecordRTC from "recordrtc";
+import axios from "axios";
+import videojs from "video.js";
+// eslint-disable-next-line
+import Record from "videojs-record/dist/videojs.record.js";
 export default {
   props: {
     currentQuestion: Object,
@@ -78,7 +86,7 @@ export default {
       required: true,
     },
   },
-  data: function () {
+  data() {
     return {
       selectedIndex: null,
       correctIndex: null,
@@ -87,7 +95,6 @@ export default {
       isFinished: false,
       isRecorded: false,
       questionNumber: 0,
-
       fullPage: true,
       color: "#5c80d1",
       player: "",

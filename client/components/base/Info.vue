@@ -15,7 +15,7 @@
         size="body-1"
         class="d-flex justify-center"
         space="4"
-        title="MULTI-PURPOSE THEME"
+        title="CrewMSG.Com.Ru"
         weight="regular"
       />
 

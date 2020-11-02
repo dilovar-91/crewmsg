@@ -34,7 +34,7 @@
 
 <script>
 import RecordAnswer from "./RecordAnswer.vue";
-
+import axios from "axios";
 export default {
   props: {
     title: {
@@ -58,17 +58,26 @@ export default {
   },
   data() {
     return {
-      total: this.questions.length,
+      total: 5,
       index: 0,
       isStarted: false,
-      questions: [],
+
+      isFinished: false,
+      isRecorded: false,
     };
   },
 
-  async fetch() {
-    this.questions = await this.$axios.get(
-      `https://jsonplaceholder.typicode.com/posts`
-    );
+  async fetch({ store, query }) {
+    await store.dispatch("interview/fetchWQuestions", { id: query.id });
+    await store.dispatch("interview/fetchInterview", { id: query.id });
+  },
+  computed: {
+    questions() {
+      return this.$store.state.interview.questions;
+    },
+    interview() {
+      return this.$store.state.interview.interview;
+    },
   },
 
   methods: {

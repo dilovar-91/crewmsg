@@ -19,7 +19,11 @@
           </div>
         </v-col>
 
-        <v-col class="text-center text-md-right" cols="12" md="6">Copyright &copy; 2020 CrewMSG, LLC</v-col>
+        <v-col
+          class="text-center text-md-right"
+          cols="12"
+          md="6"
+        >Copyright &copy; 2020 CrewMSG.Com.Ru, LLC</v-col>
       </v-row>
     </v-container>
   </v-footer>
