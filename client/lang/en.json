@@ -44,6 +44,19 @@
     "for_companies": "For Companies",
     "for_sailors": "For Sailors",
     "home_description": "QUICK START OF YOUR CAREER AT SEA",
-    "join_us": "Join Us"
+    "hero_title": "Start your maritime career in one click",
+    "hero_description": "This is a simple and effective way to conduct an interview, while getting the most information about the applicant. Try it! The service has a great deal of work needs to combine a wealth of experience with a tradition of innovation that provides professional crew manning in a first class condition.",
+    "join_us": "Join Us",
+    "features": {
+      "our_services": "Our services",
+      "description": "Our experience in maritime shipping gives an unique insight into the insurance of sailors employment. We have a trusted reputation among our clients and partners.",
+      "online_employment": "Online Employment",
+      "online_employment_description": "Own online sea jobs portal. We do archive better results by working online. Be interviewed in a few mouse clicks and get all instructions on how to proceed.",
+      "video_cv_resume": "Video cv resume",
+      "video_cv_resume_description": "What is a Video Resume? A video resume is a tool that you can use to help you get your dream job."
+
+
+    }
+
   }
 }

@@ -55,10 +55,11 @@ class InterviewController extends Controller
     }
 
     public function videoSend(Request $request){
+//        /return response()->json($request, 201);
         $data = $this->validate($request, [
             'blob'        => 'required',
         ]);
-        $filename = uniqid();
+        $filename = time() . "_". uniqid();
         Storage::disk('public')
             ->put('videos/'.$filename.'.webm', file_get_contents($request->blob));
         

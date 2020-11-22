@@ -2,13 +2,12 @@ require('dotenv').config()
 const { join } = require('path')
 const { copySync, removeSync } = require('fs-extra')
 
-
 module.exports = {
-  mode: 'spa', // Comment this for SSR
-  
+  mode: 'universal', // Comment this for SSR
+
   server: {
-    //port: process.env.APP_PORT || 9000, // default: 3000
-    //host: '0.0.0.0', // default: localhost
+    // port: process.env.APP_PORT || 9000, // default: 3000
+    // host: '0.0.0.0' // default: localhost
   },
   srcDir: __dirname,
 
@@ -52,27 +51,52 @@ module.exports = {
     '~plugins/base',
     '~plugins/nuxt-client-init', // Comment this for SSR
     { src: '~plugins/vuelidate', mode: 'client' },
-    { src: "~plugins/vue-quill-editor", ssr: false },
-    //{ src: "~plugins/record-plugins", ssr: false },
+    { src: '~plugins/vue-quill-editor', ssr: false }
 
   ],
 
   modules: [
     '@nuxtjs/router',
-
+    'nuxt-seo',
+    [
+      'vue-sweetalert2/nuxt',
+      {
+        confirmButtonColor: '#41b882',
+        cancelButtonColor: '#ff7674'
+      }
+    ]
+    // 'nuxt-i18n'
   ],
+  seo: {
+    // Module options
+    baseUrl: 'https://crewmsg.com.ua',
+    name: 'Name of site',
+    title: 'Lets finish it',
+    templateTitle: '%name% - %title%',
+    description: 'БЫСТРЫЙ СТАРТ ВАШЕЙ КАРЬЕРЫ В МОРЕ'
+    // ...
+  },
+
+  i18n: {
+    locales: ['en', 'ru', 'de'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en'
+    }
+  },
+
   proxy: {
     '/api': {
       target: 'http://test',
       pathRewrite: {
         '^/api': '/'
       }
-    },
+    }
   },
 
   build: {
     extractCSS: true,
-    standalone: true,
+    standalone: true
   },
 
   buildModules: [
@@ -87,15 +111,15 @@ module.exports = {
       light: {
         primary: '#42a5f6',
         secondary: '#050b1f',
-        accent: '#204165',
-      },
+        accent: '#204165'
+      }
 
-    },
+    }
   },
 
   hooks: {
     generate: {
-      done(generator) {
+      done (generator) {
         // Copy dist files to public/_nuxt
         if (generator.nuxt.options.dev === false && generator.nuxt.options.mode === 'spa') {
           const publicDir = join(generator.nuxt.options.rootDir, 'public', '_nuxt')

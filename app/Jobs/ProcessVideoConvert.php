@@ -7,9 +7,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\DB;
 use App\Models\Answer;
 use \FFMpeg;
+use FFMpeg\Filters\Video\VideoFilters;
 
 class ProcessVideoConvert implements ShouldQueue
 {
@@ -36,10 +36,12 @@ class ProcessVideoConvert implements ShouldQueue
         
         $answer = $this->answer;
         $file = substr($answer->answer, 0, -4);
-        FFMpeg::fromDisk('local')->open('public/videos/'.$file.'.webm')
-        ->export()
-        ->inFormat(new FFMpeg\Format\Video\X264('libmp3lame', 'libx264'))
-        ->withVisibility('public')
-        ->save('public/videos/'.$answer->answer);
+        FFMpeg::fromDisk('public')
+            ->open('videos/'.$file.'.webm')
+            ->export()
+            ->toDisk('public')
+            ->inFormat(new FFMpeg\Format\Video\X264('libmp3lame', 'libx264'))
+            ->save('videos/'.$answer->answer);
+
     }
 }

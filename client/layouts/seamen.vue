@@ -1,6 +1,10 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp" app>
+    <v-navigation-drawer
+      v-model="drawer"
+      :clipped="$vuetify.breakpoint.lgAndUp"
+      app
+    >
       <v-list dense>
         <template v-for="item in items">
           <v-list-group
@@ -15,45 +19,58 @@
                 <v-list-item-title>{{ item.text }}</v-list-item-title>
               </v-list-item-content>
             </template>
-            <v-list-item v-for="(child, i) in item.children" :key="i" link>
+            <v-list-item
+              v-for="(child, i) in item.children"
+              :key="i"
+              link
+              :to="'/seamen/' + child.url"
+            >
               <v-list-item-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
               </v-list-item-action>
               <v-list-item-content>
                 <v-list-item-title>
-                  <router-link class="link" :to="'/seamen/'+child.url">{{ child.text }}</router-link>
+                  {{ child.text }}
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
-          <v-list-item v-else :key="item.text" link>
+          <v-list-item v-else :key="item.text" link :to="'/seamen/' + item.url">
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>
-                <router-link class="link grey lighten-5" :to="'/seamen/'+item.url">{{ item.text }}</router-link>
+                {{ item.text }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </template>
-        <v-list-item link>
+        <v-list-item link @click="logout()">
           <v-list-item-action>
             <v-icon>mdi-logout</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>
-              <span class="link grey lighten-5" @click="logout()">{{ $t('logout') }}</span>
+              {{ $t("logout") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app color="blue darken-3" dark>
+    <v-app-bar
+      :clipped-left="$vuetify.breakpoint.lgAndUp"
+      app
+      color="dark-blue darken-3"
+      dark
+    >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-        <span class="hidden-sm-and-down">{{appName}}</span>
+        <v-btn class="hidden-sm-and-down" text to="/" x-large>
+          {{ appName }}
+        </v-btn>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -75,7 +92,11 @@
         </template>
 
         <v-list>
-          <v-list-item v-for="(value, key) in locales" :key="key" @click.prevent="setLocale(key)">
+          <v-list-item
+            v-for="(value, key) in locales"
+            :key="key"
+            @click.prevent="setLocale(key)"
+          >
             <v-list-item-title>{{ value }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -159,5 +180,8 @@ export default {
 <style scoped>
 .link a:hover {
   text-decoration: none;
+}
+.dark-blue {
+  background-color: rgb(24 42 62 / 85%) !important;
 }
 </style>

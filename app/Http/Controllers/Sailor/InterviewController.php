@@ -11,12 +11,14 @@ class InterviewController extends Controller
 {
     public function getQuestions($interview_id)
     {
-        $questions = Question::where('interview_id', $interview_id)->first();
+        //$questions = Question::where('interview_id', $interview_id)->first();
+        
         return response()->json($questions, 201);
     }
     public function getInterview($interview_id)
     {
-        $interview = Interview::with(["invite"])->where('interview_id', $interview_id)->first();
+        //$interview = Interview::with(["invite", 'questions'])->where('id', $interview_id)->first();
+        $interview = Interview::with(['questions', 'user', 'questions.answer'])->where('id', $interview_id)->first();      
         return response()->json($interview, 201);
     }
 }
