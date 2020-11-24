@@ -43,8 +43,38 @@
     "home": "Главная",
     "for_companies": "Компаниям",
     "for_sailors": "Морякам",
-    "hero_title": "БЫСТРЫЙ СТАРТ ВАШЕЙ КАРЬЕРЫ В МОРЕ",
-    "hero_description": "БЫСТРЫЙ СТАРТ ВАШЕЙ КАРЬЕРЫ В МОРЕ",
-    "join_us": "Присоединиться"
+    "home_description": "QUICK START OF YOUR CAREER AT SEA",
+    "hero_title": "Начни свою карьеру в море всего в один клик",
+    "hero_description": "Это простой и эффективный способ провести собеседование и получить подробную  информацию о соискателе. Нам удалось объединить колоссальный опыт и современные технологии,  чтобы обеспечить подбор  профессионального экипажа на судно.",
+    "join_us": "Join Us",
+    "features": {
+      "our_services": "Наши услуги",
+      "description": "Опыт OneClick Marine предоставляет весомые гарантии в трудоустройстве моряков. Мы пользуемся безупречной репутацией среди клиентов и партнеров.",
+      "online_employment": "Онлайн трудоусройство",
+      "online_employment_description": "База вакансий ежедневно обновляется. Мы добиваемся лучших результатов, работая онлайн. Пройдите собеседование в несколько кликов и получите все инструкции о дальнейших дейсвиях.",
+      "video_cv_resume": "Видео резюме",
+      "video_cv_resume_description": "Что такое видео-резюме? Видео-резюме - это инструмент, с помощью которого вы можете получить работу своей мечты.",
+      "quality_management": "Управление качеством ",
+      "quality_management_description": "Команда квалифицированных специалистов достигает поставленных целей за счет внедренной системы качества и управления.",
+      "support": "Поддержка 24/7",
+      "support_description": "Наши менеджеры всегда готовы ответить на ваши вопросы в любое время суток support@crewmsg.com.",
+      "most_demand": "Актуальные вакансии",
+      "most_demand_description": "Гарантируем только востребованные и актуальные вакансии. Наша команда сосредоточена на поиске новых топовых предложений для каждого соискателя.",
+      "light_services": "Простой в использовании ",
+      "light_services_description": "Имея большой опыт в создании подобных видео интервью мы предоставим вам условия для сорздания професиионального и востреованного резюме."
+
+    },
+    "why_choose_us": {
+      "title": "Why Choose Us?",
+      "description": "Our portal helps seafarers find vacancies, and crewing companies select a crew for a ship, as well as an automated video interview with the candidate.",
+      "secure_platform": "Secure Platform",
+      "secure_platform_description": "OneClick Marine is the world’s foremost crewing company. A great deal of work needs to combine a wealth of experience with a tradition of innovation that provides professional crew manning in a first class condition.",
+      "easy_to_use": "Easy to Use",
+      "easy_to_use_description": "Our experience in maritime shipping gives an unique insight into the insurance of sailors employment. We have a trusted reputation among our clients and partners.",
+      "creative_solutions": "Creative Solutions",
+      "creative_solutions_description": "We work globally but maintain a personal approach to each customer, providing you with complete assurance during our cooperation. Our team offer solutions for every aspect of your employment.",
+      "work_at_sea": "Work at sea",
+      "work_at_sea_description": "We understand that as well as being your passion, sea is a work. Our dedicated and professional team will ensure it always provides maximum return."
+    }
   }
 }

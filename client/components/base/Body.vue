@@ -12,6 +12,7 @@
       v-if="text"
       v-text="text"
     />
+
     <div
       v-else-if="html"
       v-html="html"

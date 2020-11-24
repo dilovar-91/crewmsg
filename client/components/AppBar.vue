@@ -1,9 +1,9 @@
 <template>
   <div>
     <v-app-bar id="home-app-bar" app dark elevation="1" class="appstyle" height="90">
-      <base-img src="/images/logo.png" class="ml-5 mr-2" contain max-width="52" width="100%" />
-      <h3 class="white--text">CrewMSG</h3>
-
+      <nuxt-link to="/">
+        <base-img src="/images/logo-white.svg" class="ml-5 mr-2" contain max-width="200" width="100%" />
+      </nuxt-link>
       <v-spacer />
 
       <div>
@@ -18,7 +18,9 @@
             class="font-weight-bold white--text"
             min-width="96"
             text
-          >{{ name }}</v-tab>
+          >
+            {{ name }}
+          </v-tab>
         </v-tabs>
       </div>
       <LocaleDropdown />
@@ -32,18 +34,18 @@
 
 <script>
 export default {
-  name: "HomeAppBar",
+  name: 'HomeAppBar',
 
   components: {
-    HomeDrawer: () => import("./Drawer"),
-    LocaleDropdown: () => import("@/components/LocaleDropdown"),
+    HomeDrawer: () => import('./Drawer'),
+    LocaleDropdown: () => import('@/components/LocaleDropdown')
   },
 
   data: () => ({
     drawer: null,
-    items: ["Home", "For sailors", "For Companies", "Contact"],
-  }),
-};
+    items: ['Home', 'For sailors', 'For Companies', 'Contact']
+  })
+}
 </script>
 
 <style lang="css">

@@ -53,10 +53,27 @@
       "online_employment": "Online Employment",
       "online_employment_description": "Own online sea jobs portal. We do archive better results by working online. Be interviewed in a few mouse clicks and get all instructions on how to proceed.",
       "video_cv_resume": "Video cv resume",
-      "video_cv_resume_description": "What is a Video Resume? A video resume is a tool that you can use to help you get your dream job."
-
-
+      "video_cv_resume_description": "What is a Video Resume? A video resume is a tool that you can use to help you get your dream job.",
+      "quality_management": "Quality Managment",
+      "quality_management_description": "A team of qualified specialists achieves the set goals due to the implemented quality system and management.",
+      "support": "Support 24/7",
+      "support_description": "Our managers are always ready to answer your questions at any time of the day.",
+      "most_demand": "Most Demanding",
+      "most_demand_description": "We guarantee most demanding and urgent vacancies. Our team is highly concentrated in finding new top offers for each employee.",
+      "light_services": "Light Services",
+      "light_services_description": "Having prior experience producing videos like this, there's plenty that anyone looking to make a video resume."
+    },
+    "why_choose_us": {
+      "title": "Why Choose Us?",
+      "description": "Our portal helps seafarers find vacancies, and crewing companies select a crew for a ship, as well as an automated video interview with the candidate.",
+      "secure_platform": "Secure Platform",
+      "secure_platform_description": "OneClick Marine is the world’s foremost crewing company. A great deal of work needs to combine a wealth of experience with a tradition of innovation that provides professional crew manning in a first class condition.",
+      "easy_to_use": "Easy to Use",
+      "easy_to_use_description": "Our experience in maritime shipping gives an unique insight into the insurance of sailors employment. We have a trusted reputation among our clients and partners.",
+      "creative_solutions": "Creative Solutions",
+      "creative_solutions_description": "We work globally but maintain a personal approach to each customer, providing you with complete assurance during our cooperation. Our team offer solutions for every aspect of your employment.",
+      "work_at_sea": "Work at sea",
+      "work_at_sea_description": "We understand that as well as being your passion, sea is a work. Our dedicated and professional team will ensure it always provides maximum return."
     }
-
   }
 }

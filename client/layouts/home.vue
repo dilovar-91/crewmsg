@@ -13,13 +13,12 @@
 
 <script>
 export default {
-  name: "HomeLayout",
-
+  name: 'HomeLayout',
   components: {
-    HomeAppBar: () => import("@/components/AppBar"),
-    HomeFooter: () => import("@/components/Footer"),
-    HomeSettings: () => import("@/components/Settings"),
-    HomeSystemBar: () => import("@/components/SystemBar"),
-  },
-};
+    HomeAppBar: () => import('@/components/AppBar'),
+    HomeFooter: () => import('@/components/Footer')
+    // HomeSettings: () => import('@/components/Settings'),
+    // HomeSystemBar: () => import('@/components/SystemBar')
+  }
+}
 </script>

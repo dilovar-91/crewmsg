@@ -6,7 +6,6 @@
     <ProFeatures />
     <ContactUs />
     <Affiliates />
-    <SocialMedia />
     <KeepInTouch />
     <Newsletter />
     <Info />
@@ -19,7 +18,6 @@ import ThemeFeatures from '@/pages/sections/ThemeFeatures'
 import Features from '@/pages/sections/Features'
 import ContactUs from '@/pages/sections/ContactUs'
 import Affiliates from '@/pages/sections/Affiliates'
-import SocialMedia from '@/pages/sections/SocialMedia'
 import KeepInTouch from '@/pages/sections/KeepInTouch'
 import Newsletter from '@/pages/sections/Newsletter'
 import ProFeatures from '@/pages/sections/ProFeatures'
@@ -34,7 +32,6 @@ export default {
     Features,
     ContactUs,
     Affiliates,
-    SocialMedia,
     KeepInTouch,
     Newsletter,
     ProFeatures,

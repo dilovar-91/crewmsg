@@ -65,27 +65,27 @@
       color="dark-blue darken-3"
       dark
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-        <v-btn class="hidden-sm-and-down" text to="/" x-large>
-          {{ appName }}
+        <v-btn text to="/" x-large>
+          <v-img src="/images/logo-white.svg" width="150px" />
         </v-btn>
       </v-toolbar-title>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-btn icon>
         <v-icon>mdi-bell</v-icon>
       </v-btn>
       <v-btn icon large>
         <v-avatar size="32px" item>
-          <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
+          <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
         </v-avatar>
       </v-btn>
       <v-menu bottom left>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn dark v-bind="attrs" v-on="on" outlined>
+          <v-btn dark v-bind="attrs" outlined v-on="on">
             {{ locales[locale] }}
             <v-icon>mdi-web</v-icon>
           </v-btn>
@@ -109,73 +109,73 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { loadMessages } from "~/plugins/i18n";
+import { mapGetters } from 'vuex'
+import { loadMessages } from '~/plugins/i18n'
 export default {
   props: {
-    source: String,
+    source: String
   },
   data: ({ context, app }) => ({
     drawer: null,
     appName: process.env.appName,
     items: [
-      { icon: "mdi-home", text: "Главная", url: "test" },
+      { icon: 'mdi-home', text: 'Главная', url: 'test' },
 
       {
-        icon: "mdi-briefcase",
-        text: "Вакансии",
-        url: "vacancies",
+        icon: 'mdi-briefcase',
+        text: 'Вакансии',
+        url: 'vacancies'
       },
       {
-        icon: "mdi-chevron-up",
-        "icon-alt": "mdi-chevron-down",
-        text: "Интервью",
-        url: "interviews",
+        icon: 'mdi-chevron-up',
+        'icon-alt': 'mdi-chevron-down',
+        text: 'Интервью',
+        url: 'interviews',
         model: true,
         children: [
-          { icon: "mdi-camera-iris", text: "Мои интервью", url: "interviews" },
+          { icon: 'mdi-camera-iris', text: 'Мои интервью', url: 'interviews' },
           {
-            icon: "mdi-account-multiple-plus",
-            text: "Приглашение",
-            url: "interview/invites",
+            icon: 'mdi-account-multiple-plus',
+            text: 'Приглашение',
+            url: 'interview/invites'
           },
           {
-            icon: "mdi-message-reply",
-            text: "Мои ответы",
-            url: "interview/feedback",
-          },
-        ],
+            icon: 'mdi-message-reply',
+            text: 'Мои ответы',
+            url: 'interview/feedback'
+          }
+        ]
       },
 
-      { icon: "mdi-cog", text: "Профиль", url: "profile" },
+      { icon: 'mdi-cog', text: 'Профиль', url: 'profile' },
 
-      { icon: "mdi-help-circle", text: "Справочники", url: "information" },
-    ],
+      { icon: 'mdi-help-circle', text: 'Справочники', url: 'information' }
+    ]
   }),
 
   computed: mapGetters({
-    locale: "lang/locale",
-    locales: "lang/locales",
-    user: "auth/user",
+    locale: 'lang/locale',
+    locales: 'lang/locales',
+    user: 'auth/user'
   }),
 
   methods: {
-    setLocale(locale) {
+    setLocale (locale) {
       if (this.$i18n.locale !== locale) {
-        loadMessages(locale);
+        loadMessages(locale)
 
-        this.$store.dispatch("lang/setLocale", { locale });
+        this.$store.dispatch('lang/setLocale', { locale })
       }
     },
-    async logout() {
+    async logout () {
       // Log out the user.
-      await this.$store.dispatch("auth/logout");
+      await this.$store.dispatch('auth/logout')
 
       // Redirect to login.
-      this.$router.push({ name: "login" });
-    },
-  },
-};
+      this.$router.push({ name: 'login' })
+    }
+  }
+}
 </script>
 <style scoped>
 .link a:hover {

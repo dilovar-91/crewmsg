@@ -1,7 +1,7 @@
 <template>
   <base-section id="affiliates" class="grey lighten-4" space="36">
     <v-container>
-      <base-section-heading title="Who's using Zero?" />
+      <base-section-heading title="Who's using OneClick Marine?" />
 
       <v-slide-group>
         <template v-for="n in 6">
@@ -26,6 +26,6 @@
 
 <script>
 export default {
-  name: "SectionAffiliates",
-};
+  name: 'SectionAffiliates'
+}
 </script>

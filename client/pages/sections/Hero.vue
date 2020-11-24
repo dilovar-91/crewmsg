@@ -18,7 +18,7 @@
       <v-container class="fill-height px-4 py-12">
         <v-responsive class="d-flex align-center" height="100%" max-width="700" width="100%">
           <base-heading :title="$t('home_page.hero_title')" />
-          <base-body :html="$t('home_page.hero_description')" />
+          <base-body dark :html="$t('home_page.hero_description')" />
 
           <div
             :class="$vuetify.breakpoint.smAndDown ? 'flex-column align-start' : 'align-center'"

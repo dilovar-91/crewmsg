@@ -4,12 +4,12 @@
       <v-row>
         <v-col cols="12" md="6">
           <div class="d-flex flex-wrap justify-md-start justify-center justify-md-none">
-            <template v-for="(s, i) in social">
-              <a :key="s" class="white--text pa-1 pa-md-0" href="#" v-text="s" />
+            <template v-for="(s, i) in socials">
+              <a :key="s" class="white--text pa-1 pa-md-0" :href="s.link" target="_blank" v-text="s.name" />
 
               <v-responsive
-                v-if="i < social.length - 1"
-                :key="`divider-${s}`"
+                v-if="i < socials.length - 1"
+                :key="`divider-${s.name}`"
                 class="mx-4 shrink hidden-sm-and-down"
                 max-height="24"
               >
@@ -23,7 +23,9 @@
           class="text-center text-md-right"
           cols="12"
           md="6"
-        >Copyright &copy; 2020 CrewMSG.Com.Ru, LLC</v-col>
+        >
+          Copyright &copy; 2020 OneClickMarine.Com, LLC
+        </v-col>
       </v-row>
     </v-container>
   </v-footer>
@@ -31,12 +33,31 @@
 
 <script>
 export default {
-  name: "HomeFooter",
+  name: 'HomeFooter',
 
   data: () => ({
-    social: ["Facebook", "VK", "Instagram", "Linkedin"],
-  }),
-};
+    socials: [
+      {
+        name: 'Facebook',
+        link: 'https://www.facebook.com/groups/325275011585933'
+      },
+      {
+        name: 'Instagram',
+        link: 'https://www.instagram.com/crewmsg/'
+      },
+      {
+        name: 'Telegram',
+        link: 'https://t.me/crewmsg'
+      },
+      {
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/company/crewmsg/'
+      }
+
+    ]
+
+  })
+}
 </script>
 
 <style lang="sass">
