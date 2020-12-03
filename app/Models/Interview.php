@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Interview extends Model
 {
+    public $timestamps = true;
     public function invite()
     {
     return $this->belongsTo(Invite::class);
+    }
+    public function vacancy()
+    {
+    return $this->belongsTo(Interview::class);
     }
     public function user()
     {

@@ -1,7 +1,7 @@
 {
   "ok": "OK",
   "cancel": "Abbrechen",
-  "error_alert_title": "Ups ...",
+  "error_alert_title": "Ups",
   "error_alert_text": "Es ist ein Fehler aufgetreten! Bitte versuchen Sie es erneut.",
   "token_expired_alert_title": "Sitzung abgelaufen!",
   "token_expired_alert_text": "Bitte melden Sie sich erneut an, um fortzufahren.",
@@ -44,6 +44,36 @@
     "for_companies": "Für Unternehmen",
     "for_sailors": "für Meeresfrüchte",
     "home_description": "SCHNELLER START IHRER KARRIERE AM MEER",
-    "join_us": "Begleiten Sie uns"
+    "hero_title": "Beginnen Sie Ihre maritime Karriere mit einem Klick",
+    "hero_description": "Dies ist eine einfache und effektive Möglichkeit, ein Interview zu führen und gleichzeitig die meisten Informationen über den Bewerber zu erhalten. Probieren Sie es aus! Der Dienst hat viel Arbeit, um einen Erfahrungsschatz mit einer Tradition der Innovation zu verbinden bietet professionelle Besatzung in einem erstklassigen Zustand. ",
+    "join_us": "Begleiten Sie uns",
+    "features": {
+      "our_services": "Unsere Dienstleistungen",
+      "description": "Unsere Erfahrung in der Seeschifffahrt gibt einen einzigartigen Einblick in die Versicherung der Beschäftigung von Seeleuten. Wir haben einen vertrauenswürdigen Ruf bei unseren Kunden und Partnern.",
+      "online_employment": "Online-Beschäftigung",
+      "online_employment_description": "Eigenes Online-Portal für Seejobs. Wir archivieren bessere Ergebnisse, indem wir online arbeiten. Lassen Sie sich mit wenigen Mausklicks interviewen und erhalten Sie alle Anweisungen zum weiteren Vorgehen.",
+      "video_cv_resume": "Video Lebenslauf",
+      "video_cv_resume_description": "Was ist ein Video-Lebenslauf? Ein Video-Lebenslauf ist ein Tool, mit dem Sie Ihren Traumjob finden können.",
+      "quality_management": "Qualitätsmanagement",
+      "quality_management_description": "Ein Team qualifizierter Spezialisten erreicht die gesetzten Ziele aufgrund des implementierten Qualitätssystems und -managements.",
+      "support": "Unterstützung 24/7",
+      "support_description": "Unsere Manager sind immer bereit, Ihre Fragen zu jeder Tageszeit zu beantworten.",
+      "most_demand": "Am anspruchsvollsten",
+      "most_demand_description": "Wir garantieren anspruchsvollste und dringendste Stellenangebote. Unser Team konzentriert sich stark darauf, für jeden Mitarbeiter neue Top-Angebote zu finden.",
+      "light_services": "Lichtdienste",
+      "light_services_description": "Wenn Sie bereits Erfahrung mit der Produktion solcher Videos haben, gibt es viele, die einen Video-Lebenslauf erstellen möchten."
+    },
+    "why_choose_us": {
+      "title": "Warum uns wählen?",
+      "description": "Unser Portal hilft Seeleuten bei der Suche nach freien Stellen, und Besatzungsunternehmen wählen eine Besatzung für ein Schiff sowie ein automatisiertes Videointerview mit dem Kandidaten aus.",
+      "secure_platform": "Sichere Plattform",
+      "secure_platform_description": "OneClick Marine ist das weltweit führende Crewing-Unternehmen. Es ist viel Arbeit erforderlich, um einen großen Erfahrungsschatz mit einer Tradition der Innovation zu verbinden, die eine professionelle Besatzung in einem erstklassigen Zustand ermöglicht.",
+      "easy_to_use": "Einfach zu bedienen",
+      "easy_to_use_description": "Unsere Erfahrung in der Seeschifffahrt gibt einen einzigartigen Einblick in die Versicherung der Beschäftigung von Seeleuten. Wir haben bei unseren Kunden und Partnern einen vertrauenswürdigen Ruf.",
+      "creative_solutions": "Kreative Lösungen",
+      "creative_solutions_description": "Wir arbeiten global, pflegen jedoch einen persönlichen Ansatz für jeden Kunden und geben Ihnen während unserer Zusammenarbeit die volle Sicherheit. Unser Team bietet Lösungen für jeden Aspekt Ihrer Beschäftigung.",
+      "work_at_sea": "Arbeit auf See",
+      "work_at_sea_description": "Wir verstehen, dass Meer nicht nur Ihre Leidenschaft ist, sondern auch eine Arbeit. Unser engagiertes und professionelles Team wird sicherstellen, dass es immer maximale Rendite bietet."
+    }
   }
 }

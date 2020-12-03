@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quiz extends Model
 {
-    
+    public $timestamps = true;
     public function interview()
     {
     return $this->belongsTo(Interview::class);

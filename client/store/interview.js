@@ -1,106 +1,122 @@
 import axios from 'axios'
-import { data } from 'jquery'
 
-// state
 export const state = () => ({
   interview: {},
   interviews: [],
-  questions: [],
+  employerInterviews: [],
+  questions: []
 })
 
-// getters
 export const getters = {
   interview: state => state.interview,
   interviews: state => state.interviews,
-  questions: state => state.questions,
+  employerInterviews: state => state.employerInterviews,
+  questions: state => state.questions
 }
 
-// mutations
 export const mutations = {
-  SET_INTERVIEW(state, interview) {
-    state.interview = intervie
+  SET_INTERVIEW (state, interview) {
+    state.interview = interview
   },
-  SET_INTERVIEWS(state, interviews) {
-    state.interviews = intervies
+  SET_INTERVIEWS (state, interviews) {
+    state.interviews = interviews
   },
-  SET_QUESTIONS(state, questions) {
+  SET_EMPLOYER_INTERVIEWS (state, employerInterviews) {
+    state.employerInterviews = employerInterviews
+  },
+  SET_QUESTIONS (state, questions) {
     state.questions = questions
   }
 }
 
-// actions
 export const actions = {
 
-  fetchInterview({ commit }, id) {
+  fetchInterviews ({ commit }, { userId }) {
     return new Promise((resolve, reject) => {
-      axios.get("/interview/questions/" + id)
+      axios.get(`user/${userId}/interviews`)
+        .then((response) => {
+          commit('SET_INTERVIEWS', response.data)
+          resolve(response)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
+  fetchEmployerInterviews ({ commit }, { userId }) {
+    return new Promise((resolve, reject) => {
+      axios.get(`employer/${userId}/interviews`)
+        .then((response) => {
+          commit('SET_EMPLOYER_INTERVIEWS', response.data)
+          resolve(response)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
+  fetchInterview ({ commit }, { id }) {
+    return new Promise((resolve, reject) => {
+      axios.get(`interview/${id}/questions`)
         .then((response) => {
           commit('SET_INTERVIEW', response.data)
           resolve(response)
         })
-        .catch((error) => { reject(error) })
+        .catch((error) => {
+          reject(error)
+        })
     })
   },
-  fetchQuestions({ commit }, id) {
+  fetchQuestions ({ commit }, id) {
     return new Promise((resolve, reject) => {
-      axios.get("/interview/questions/" + id)
+      axios.get(`/interview/questions/` + id)
         .then((response) => {
           commit('SET_QUESTIONS', response.data)
           resolve(response)
         })
-        .catch((error) => { reject(error) })
+        .catch((error) => {
+          reject(error)
+        })
     })
   },
-  async filterByMark({ commit, state, dispatch }, markId) {
-    if (markId === undefined) {
-      commit('SET_FILTERED', state.cars)
-      return
-    }
-    if (!state.cars.length) {
-      console.log("Empty Data")
-    } else {
-      const result = state.cars.filter(l => l.mark_id === markId)
-      if (result) {
-        commit('SET_FILTERED', result)
-      } else {
-        commit('SET_FILTERED', state.cars)
-      }
-    }
-  },
-  add({ commit, dispatch }, data) {
+  create ({ commit, dispatch }, { item }) {
     return new Promise((resolve, reject) => {
-      axios.post("/usedcar/add", { item: data.item })
+      axios.post('/interview/create', { item })
         .then((response) => {
           if (response.data.id) {
-            //commit('ADD_PRICE', Object.assign(data.item, { id: response.data.id }))
-            dispatch('fetchCars');
+            dispatch('fetchInterviews')
             resolve(response)
           }
         })
-        .catch((error) => { reject(error) })
+        .catch((error) => {
+          reject(error)
+        })
     })
   },
-  edit({ commit, dispatch }, data) {
+  edit ({ commit, dispatch }, { item }) {
     return new Promise((resolve, reject) => {
-      axios.post("/usedcar/update", { item: data.item })
+      axios.post('/interview/update', { item })
         .then((response) => {
           if (response.data.id) {
-            //commit('ADD_PRICE', Object.assign(data.item, { id: response.data.id }))
-            dispatch('fetchCars');
+            dispatch('fetchInterviews')
             resolve(response)
           }
         })
-        .catch((error) => { reject(error) })
+        .catch((error) => {
+          reject(error)
+        })
     })
   },
-  delete({ commit, dispatch }, data) {
+  delete ({ commit, dispatch }, data) {
     return new Promise((resolve, reject) => {
-      axios.post("/usedcar/delete/" + data.id)
+      axios.post('/interview/delete/' + data.id)
         .then((response) => {
-          dispatch('fetchCars');
+          dispatch('fetchInterviews')
           resolve(response)
         })
-        .catch((error) => { reject(error) })
+        .catch((error) => {
+          reject(error)
+        })
     })
-  },
+  }
 }

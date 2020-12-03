@@ -37,12 +37,14 @@
 
         <v-card-title transition="slide-x-transition" class="py-0">
           <v-row>
-            <v-col cols="9">
-              <h5 transition="slide-x-reverse-transition">
-                Вопрос № {{ (questionNumber + 1) }}: {{ currentQuestion.question }}
-              </h5>
+            <v-col cols="9" sm="12">
+              <v-expand-transition>
+                <h5 v-show="expand">
+                  Вопрос № {{ (questionNumber + 1) }}: {{ currentQuestion.question }}
+                </h5>
+              </v-expand-transition>
             </v-col>
-            <v-col cols="3">
+            <v-col cols="3" sm="12">
               <v-chip
                 color="success"
                 outlined
@@ -52,15 +54,6 @@
             </v-col>
           </v-row>
         </v-card-title>
-        <v-card-actions class="pt-0">
-          <v-btn :disabled="!isRecorded" class="btn" color="primary" @click="recordSend()">
-            {{ ((questionNumber+1) !== total) ? 'Следующий вопрос': 'Сохранить' }}
-          </v-btn>
-
-          <v-btn v-show="false" class="btn btn-primary" @click="nextStep()">
-            Пропустить
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </v-col>
     <v-col v-show="!isFinished" cols="12" sm="12" md="6" class="justify-content-center">
@@ -107,6 +100,7 @@ export default {
   },
   data () {
     return {
+      expand: true,
       selectedIndex: null,
       correctIndex: null,
       shuffledAnswers: [],
@@ -157,7 +151,11 @@ export default {
       if (time === 0) {
         this.stopTimer()
         this.player.record().pause()
+        this.expand = false
         this.isRecorded = true
+        setTimeout(() => {
+          this.recordSend()
+        }, 1000)
       }
     }
   },
@@ -211,12 +209,17 @@ export default {
       this.player.record().getDevice()
     }
   },
+  beforeDestroy () {
+    if (this.player) {
+      this.player.dispose()
+    }
+  },
   methods: {
-
     recordSend () {
       this.increment(true)
       this.questionNumber++
       if (this.questionNumber < this.total) {
+        this.expand = true
         this.next()
         this.player.record().resume()
         this.isRecorded = false
@@ -281,13 +284,11 @@ export default {
     stopTimer () {
       clearTimeout(this.timer)
     }
-  },
-  beforeRouteLeave (to, from, next) {
-    if (this.player) {
-      this.player.dispose()
-    }
-    next()
   }
+  /* beforeRouteLeave (to, from, next) {
+
+    next()
+  } */
 }
 </script>
 

@@ -10,12 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class VacancyController extends Controller
 {
-    public function create(Request $request)
-    {
-        $user_id = Auth::user()->id;
-        return view('employer.add-vacancy')->with(array('user_id'=>$user_id)); 
-        
-    }
 
     public function update(Request $request)
     {
@@ -32,30 +26,12 @@ class VacancyController extends Controller
         $vacancy->save();         
         return response()->json($vacancy, 201);
     }
-    public function index()
-    {
-        $user_id = Auth::user()->id;
-        $vacancies = Vacancy::where('user_id', $user_id)->paginate(12);
-        return view('employer.vacancies')->with(array('user_id'=>$user_id, 'vacancies'=>$vacancies)); 
-        
-    }
 
-    public function detail($id)
-    {
-        $vacancy = Vacancy::where('id', $id)->first();
-        //dd($interview);
-        return view('employer.vacancy-detail')->with(array('vacancy'=>$vacancy));
-    }
-    public function edit($id)
-    {
-        $vacancy = Vacancy::where('id', $id)->first();        
-        return view('employer.vacancy-edit')->with(array('vacancy'=>$vacancy));
-    }
     public function vacancies($user_id)
     {
         $vacancies = Vacancy::where('user_id', $user_id)->get();
         return response()->json($vacancies, 200);
-        
+
     }
     public function candidates()
     {

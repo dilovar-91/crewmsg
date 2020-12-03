@@ -12,54 +12,178 @@
           <v-card class="mx-auto">
             <v-app-bar
               class="grey lighten-5"
-              elevate-on-scroll
-              scroll-target="#scrolling-techniques-7"
             >
               <v-toolbar-title>Добавление интервью</v-toolbar-title>
 
-              <v-spacer></v-spacer>
+              <v-spacer />
             </v-app-bar>
 
             <v-card-text>
               <v-form ref="form" v-model="valid" lazy-validation>
+                <v-text-field
+                  v-model="form.title"
+                  :rules="[v => !!v || 'Please enter title']"
+                  label="Title"
+                  required
+                />
                 <v-select
-                  v-model="vacancy"
+                  v-model="form.vacancy_id"
+                  item-text="title"
+                  item-value="id"
                   :items="vacancies"
                   :rules="[v => !!v || 'Please select vacancy']"
                   label="Vacancy"
                   required
-                ></v-select>
+                />
                 <section class="content">
                   <client-only>
                     <quill-editor
-                      class="mt-4 editor"
-                      style="max-height:300px; height: 300"
-                      v-model="content"
                       ref="textEditor"
+                      v-model="form.description"
+                      class="mt-4 editor"
+                      style="min-height:180px; height: 220px"
                       :options="editorOption"
-                    ></quill-editor>
+                    />
                   </client-only>
                 </section>
 
-                <template v-slot:extension>
-                  <v-tabs v-model="model" centered slider-color="yellow">
-                    <v-tab v-for="i in 3" :key="i" :href="`#tab-${i}`">Item {{ i }}</v-tab>
-                  </v-tabs>
-                </template>
+                <v-tabs
+                  v-model="tab"
+                  color="primary"
+                  grow
+                >
+                  <v-tab>
+                    Quiestions
+                  </v-tab>
+                  <v-tab>
+                    Quizzes
+                  </v-tab>
+                </v-tabs>
 
-                <v-tabs-items v-model="model">
-                  <v-tab-item v-for="i in 3" :key="i" :value="`tab-${i}`">
-                    <v-card flat>
-                      <v-card-text v-text="text"></v-card-text>
+                <v-tabs-items v-model="tab" class="mt-2">
+                  <v-tab-item>
+                    <v-card
+                      color="basil"
+                      flat
+                    >
+                      <v-card-text>
+                        <v-data-table
+                          :headers="question_headers"
+                          :items="questions"
+                          class="elevation-1"
+                          hide-default-footer
+                        >
+                          <template v-slot:top>
+                            <v-row>
+                              <v-col cols="12" class="ml-4">
+                                <v-btn color="primary" @click="addQuestion">
+                                  <v-icon>mdi-plus</v-icon> Add question
+                                </v-btn>
+                              </v-col>
+                              <v-col v-if="isBrowser" cols="12" class="ml-4">
+                                <v-alert
+                                  v-if="!$v.questions.required"
+                                  color="red"
+                                  type="error"
+                                >
+                                  Questions is required.
+                                </v-alert>
+                                <v-alert
+                                  v-if="!$v.questions.minLength"
+                                  color="red"
+                                  type="error"
+                                >
+                                  Questions must be at least {{ $v.questions.$params.minLength.min }} elements.
+                                </v-alert>
+                              </v-col>
+                            </v-row>
+                          </template>
+                          <template
+                            v-slot:body
+                          >
+                            <tbody>
+                              <tr
+                                v-for="(question, index) in questions"
+                                :key="index"
+                              >
+                                <td> {{ index+1 }}</td>
+                                <td>
+                                  <v-textarea v-model="question.text" rows="1" :rules="fieldRules" :label="'Вопрос '+ (index+1) " />
+                                </td>
+                                <td><v-text-field v-model="question.time" :rules="fieldRules" label="Время ответа" /></td>
+
+                                <td>
+                                  <v-btn icon small color="error" @click="deleteQuestion(index)">
+                                    <v-icon>mdi-delete</v-icon>
+                                  </v-btn>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </template>
+                        </v-data-table>
+                      </v-card-text>
+                    </v-card>
+                  </v-tab-item>
+                  <v-tab-item>
+                    <v-card
+                      color="basil"
+                      flat
+                    >
+                      <v-card-text>
+                        <v-data-table
+                          :headers="question_headers"
+                          :items="questions"
+                          class="elevation-1"
+                          hide-default-footer
+                        >
+                          <template v-slot:top>
+                            <v-row>
+                              <v-col cols="12" class="ml-4">
+                                <v-btn color="success" @click="addQuiz">
+                                  <v-icon>mdi-plus</v-icon> Add quiz
+                                </v-btn>
+                              </v-col>
+                            </v-row>
+                          </template>
+                          <template
+                            v-slot:body
+                          >
+                            <tbody>
+                              <tr
+                                v-for="(quiz, index) in quizzes"
+                                :key="index"
+                              >
+                                <td> {{ index+1 }}</td>
+                                <td>
+                                  <v-textarea v-model="quiz.text" rows="1" :rules="fieldRules" :label="'Вопрос '+ (index+1) " />
+                                </td>
+                                <td><v-text-field v-model="quiz.option1" :rules="fieldRules" label="Вариант №1" /></td>
+                                <td><v-text-field v-model="quiz.option2" :rules="fieldRules" label="Вариант №2" /></td>
+                                <td><v-text-field v-model="quiz.option3" :rules="fieldRules" label="Вариант №3" /></td>
+                                <td><v-text-field v-model="quiz.option4" :rules="fieldRules" label="Вариант №4" /></td>
+                                <td><v-text-field v-model="quiz.answer" :rules="fieldRules" label="Ответ" /></td>
+
+                                <td>
+                                  <v-btn icon small color="red" @click="deleteQuiz(index)">
+                                    <v-icon>mdi-delete</v-icon>
+                                  </v-btn>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </template>
+                        </v-data-table>
+                      </v-card-text>
                     </v-card>
                   </v-tab-item>
                 </v-tabs-items>
 
-                <v-btn :disabled="!valid" color="success" class="mr-4 mt-2" @click="validate">
+                <v-btn v-if="isBrowser" :disabled="!valid || $v.$invalid" color="success" class="mr-4 mt-2" @click="save">
                   <v-icon>mdi-floppy</v-icon>Сохранить
                 </v-btn>
 
-                <v-btn color="error" class="mr-4 mt-2" @click="reset()">Сбросить</v-btn>
+                <v-btn color="error" class="mr-4 mt-2" @click="reset()">
+                  Сбросить
+                </v-btn>
               </v-form>
             </v-card-text>
           </v-card>
@@ -69,75 +193,163 @@
   </div>
 </template>
 <script>
-import Dropzone from "nuxt-dropzone";
-import "nuxt-dropzone/dropzone.css";
-
+import { requiredIf, minLength } from 'vuelidate/lib/validators'
 export default {
-  layout: "employer",
-  middleware: "role",
+  layout: 'employer',
+  middleware: 'role',
   components: {
-    Dropzone,
+
   },
   data: () => ({
+    tab: null,
+    isBrowser: false,
     links: [
       {
-        text: "Employer",
+        text: 'Employer',
         disabled: false,
-        href: "/employer",
+        href: '/employer'
       },
       {
-        text: "Отклики",
-        disabled: true,
-        href: "/feedback",
+        text: 'Interviews',
+        disabled: false,
+        href: '/employer/interviews'
       },
       {
-        text: "Create",
+        text: 'Create',
         disabled: true,
-        href: "/employer/vacancy/create",
-      },
+        href: '/employer/vacancy/create'
+      }
     ],
-    vacancies: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    vacancy: "",
-    model: "tab-2",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    form: {
+      title: '',
+      invite_id: '',
+      vacancy_id: '',
+      description: ''
+    },
+    questions: [],
+    question_headers: [
+      { text: '№', value: 'id', sortable: false },
+      { text: 'Вопрос', value: 'text', sortable: false },
+      { text: 'Время', value: 'time', sortable: false },
+      { text: 'Удалить', value: 'remove', sortable: false }
+    ],
+    quiz_headers: [
+      { text: '№', value: 'id', sortable: false },
+      { text: 'Вопрос', value: 'question', sortable: false },
+      { text: 'Вариант №1', value: 'option1', sortable: false },
+      { text: 'Вариант №2', value: 'option2', sortable: false },
+      { text: 'Вариант №3', value: 'option3', sortable: false },
+      { text: 'Вариант №4', value: 'option4', sortable: false },
+      { text: 'Ответ', value: 'time', sortable: false },
+      { text: 'Удалить', value: 'remove', sortable: false }
+    ],
+    question: {
+      text: '',
+      time: 240,
+      pripare_time: ''
+    },
+    quizzes: [],
+    quiz: {
+      text: '',
+      option1: '',
+      option2: '',
+      option3: '',
+      option4: '',
+      correct_answer: ''
+    },
     valid: true,
-
     fieldRules: [
-      (v) => !!v || "Field is required",
-      (v) => (v && v.length >= 3) || "Field must be more than 3 characters",
+      v => !!v || 'Field is required'
     ],
-
-    dropzoneOptions: {
-      url: "/api/vacancy/uploadimage",
-      maxFilesize: 2, // MB
-      maxFiles: 1,
-      thumbnailWidth: 150, // px
-      thumbnailHeight: 150,
-      addRemoveLinks: true,
-      dictDefaultMessage:
-        "<i   class='v-icon notranslate mdi mdi-camera-enhance  text-h3'  ></i><br>Загрузка изображение",
-      headers: {},
-    },
-
-    content: "<p>Описание вакансии</p>",
+    content: '<p>Описание вакансии</p>',
     editorOption: {
-      placeholder: "Описание вакансии",
-      theme: "snow",
-    },
+      placeholder: 'Описание вакансии',
+      theme: 'snow'
+    }
   }),
+  mounted () {
+    this.isBrowser = process.browser
+  },
+  validations: {
+    questions: {
+      minLength: minLength(3),
+      required: requiredIf(function () {
+        return this.question
+      })
+    }
+  },
+
+  computed: {
+    user () {
+      return this.$store.state.auth.user
+    },
+    vacancies () {
+      return this.$store.state.vacancy.vacancies
+    }
+
+  },
+  async fetch ({ store }) {
+    await store.dispatch('vacancy/fetchUserVacancies', { userId: store.state.auth.user.id || null })
+  },
 
   methods: {
-    validate() {
-      this.$refs.form.validate();
+    reset () {
+      this.$v.$reset()
+      this.$refs.form.reset()
     },
-    reset() {
-      this.$refs.form.reset();
+    addQuestion () {
+      this.questions.push(Object.assign({}, this.question))
     },
-  },
-};
+    addQuiz () {
+      this.quizzes.push(Object.assign({}, this.quiz))
+    },
+    deleteQuestion (index) {
+      this.questions.splice(index, 1)
+    },
+    deleteQuiz (index) {
+      this.quizzes.splice(index, 1)
+    },
+    save () {
+      if (this.$refs.form.validate()) {
+        this.form.invite_id = (this.user.id || null)
+        this.form.questions = this.questions
+        this.form.quizzes = this.quizzes
+        this.$store.dispatch('interview/create', {
+          item: this.form
+        }).then((res) => {
+          this.$swal({
+            position: 'top-end',
+            icon: 'success',
+            toast: true,
+            title: 'Интервью добавлён',
+            showConfirmButton: false,
+            timer: 1000
+          })
+          this.$router.push('/employer/interviews')
+        }).catch((error) => {
+          this.$swal({
+            position: 'top-end',
+            icon: 'error',
+            toast: true,
+            title: 'Заполните обязательные поля' + error,
+            showConfirmButton: false,
+            timer: 2500
+          })
+        })
+      } else {
+        this.$swal({
+          position: 'top-end',
+          icon: 'error',
+          toast: true,
+          title: 'Заполните обязательные поля',
+          showConfirmButton: false,
+          timer: 2500
+        })
+      }
+    }
+  }
+}
 </script>
-
 
 <style lang="scss" scoped>
 .content {

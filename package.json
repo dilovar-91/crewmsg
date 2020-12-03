@@ -32,7 +32,7 @@
     "vue-i18n": "^8.21.0",
     "vue-quill-editor": "^3.0.6",
     "vue-sweetalert2": "^4.1.1",
-    "vuelidate": "^0.7.5",
+    "vuelidate": "^0.7.6",
     "webrtc-adapter": "^7.7.0"
   },
   "devDependencies": {

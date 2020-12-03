@@ -40,8 +40,8 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::get('oauth/{driver}/callback', 'Auth\OAuthController@handleProviderCallback')->name('oauth.callback');
 
 });
-Route::get('interview/questions/{id}', 'Sailor\InterviewController@getQuestions');
-Route::get('interview/{id}', 'Sailor\InterviewController@getInterview');
+Route::get('interview/{id}/questions', 'Sailor\InterviewController@getInterview');
+Route::get('user/{id}/interviews', 'Sailor\InterviewController@getUserInterviews');
 Route::post('/seamen/interview/videosend', [
     'uses' => 'Seamen\InterviewController@videosend',
     'as' => 'seamen.interview.videosend'
@@ -50,4 +50,14 @@ Route::post('/seamen/interview/invited', [
     'uses' => 'Seamen\InterviewController@invited',
     'as' => 'seamen.interview.invited'
 ]);
+
+//employer routes
+Route::get('interview/interviews', 'Employer\InterviewController@getInterviews');
+Route::get('employer/interview/{id}', 'Employer\InterviewController@getInterview');
+Route::post('interview/create', 'Employer\InterviewController@create');
+Route::post('interview/update', 'Employer\InterviewController@update');
+Route::get('employer/{id}/interviews', 'Employer\InterviewController@getInterviews');
+
+Route::get('user/{id}/vacancies', 'Employer\VacancyController@vacancies');
+
 

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
+
+    public $timestamps = true;
     public function interview()
     {
     return $this->belongsTo(Interview::class);

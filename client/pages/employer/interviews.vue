@@ -20,9 +20,11 @@
             >
               <v-toolbar-title>Interviews</v-toolbar-title>
 
-              <v-spacer></v-spacer>
+              <v-spacer />
               <v-btn to="/employer/interview/create" outlined color="success">
-                <v-icon color="success" left>mdi-plus</v-icon>Добавить интнервью
+                <v-icon color="success" left>
+                  mdi-plus
+                </v-icon>Добавить интнервью
               </v-btn>
             </v-app-bar>
 
@@ -31,23 +33,54 @@
                 <template v-slot:default>
                   <thead>
                     <tr>
-                      <th class="text-left">№</th>
-                      <th class="text-left">Интервью</th>
-                      <th class="text-left">Добавлён</th>
-                      <th class="text-left">Статус</th>
-                      <th class="text-left">Кол-во вопросов</th>
-                      <th class="text-left">Действие</th>
+                      <th class="text-left">
+                        №
+                      </th>
+                      <th class="text-left">
+                        Интервью
+                      </th>
+                      <th class="text-left">
+                        Вакансия
+                      </th>
+                      <th class="text-left">
+                        Кол-во вопросов
+                      </th>
+                      <th class="text-left">
+                        Добавлён
+                      </th>
+                      <th class="text-left">
+                        Статус
+                      </th>
+                      <th class="text-left">
+                        Действие
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="(item, i) in desserts" :key="item.name">
+                    <tr v-for="(item, i) in interviews" :key="item.name">
                       <td>{{ (i+1) }}</td>
-                      <td>{{ item.name }}</td>
-                      <td>{{ item.name }}</td>
-                      <td>{{ item.name }}</td>
-                      <td>{{ item.name }}</td>
+                      <td>{{ item.title }}</td>
+                      <td>{{ item.vacancy && item.vacancy.title }}</td>
+
+                      <td>{{ item.questions.length }}</td>
+                      <td>{{ item.created_at }}</td>
                       <td>
-                        <v-btn icon color="success">
+                        <v-chip
+                          v-if="item.status === 1"
+                          class="ma-1"
+                          color="success"
+                        >
+                          Active
+                        </v-chip>
+                        <v-chip
+                          v-else
+                          class="ma-1" color="error"
+                        >
+                          Inactive
+                        </v-chip>
+                      </td>
+                      <td>
+                        <v-btn icon color="success" :to="'/employer/interview/edit/'+item.id">
                           <v-icon>mdi-eye</v-icon>
                         </v-btn>
                       </td>
@@ -64,36 +97,33 @@
 </template>
 <script>
 export default {
-  layout: "employer",
-  middleware: "role",
+  layout: 'employer',
+  middleware: 'role',
   components: {},
   data: () => ({
     links: [
       {
-        text: "Employer",
+        text: 'Employer',
         disabled: false,
-        href: "/employer",
+        href: '/employer'
       },
       {
-        text: "Interviews",
+        text: 'Interviews',
         disabled: true,
-        href: "/interviews",
-      },
-    ],
-    desserts: [
-      {
-        name: "Frozen Yogurt",
-        calories: 159,
-      },
-      {
-        name: "Ice cream sandwich",
-        calories: 237,
-      },
-      {
-        name: "Eclair",
-        calories: 262,
-      },
-    ],
+        href: '/employer/interviews'
+      }
+    ]
   }),
-};
+  computed: {
+    user () {
+      return this.$store.state.auth.user
+    },
+    interviews () {
+      return this.$store.state.interview.employerInterviews
+    }
+  },
+  async fetch ({ store }) {
+    await store.dispatch('interview/fetchEmployerInterviews', { userId: store.state.auth.user.id || null })
+  }
+}
 </script>

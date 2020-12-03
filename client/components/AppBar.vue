@@ -51,6 +51,7 @@ export default {
 <style lang="css">
 #home-app-bar {
   /*background-color: rgba(4, 25, 44, 0.76) !important;*/
-  background-color: rgb(24 42 62 / 85%) !important;
+ /* background-color: rgb(24 42 62 / 85%) !important; */
+  background-color: #203041 !important;
 }
 </style>
