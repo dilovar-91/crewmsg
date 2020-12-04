@@ -42,7 +42,7 @@ class InterviewController extends Controller
                 );
             }
         }
-        if(count($request->item['quizzes']) > 0){
+        if(isset($request->item['quizzes']) &&  count($request->item['quizzes']) > 0){
             foreach ($request->item['quizzes'] as $quiz){
                 $ans = array($quiz['option1'], $quiz['option2'], $quiz['option3'], $quiz['option4']);
                 $quizzes[] = [
@@ -57,7 +57,10 @@ class InterviewController extends Controller
             }
         }
         Question::insert($questions);
-        Quiz::insert($quizzes);
+        if(isset($quizzes)){
+            Quiz::insert($quizzes);
+        }
+
         return response()->json($interview, 201);
 
 
@@ -83,7 +86,7 @@ class InterviewController extends Controller
             );
             }             
         }
-        if(count($request->quizzes) > 0){
+        if(isset($request->item['quizzes']) &&   count($request->quizzes) > 0){
             
             foreach ($request->quizzes as $quiz){
             $ans = array($quiz['option1'], $quiz['option2'], $quiz['option3'], $quiz['option4']);

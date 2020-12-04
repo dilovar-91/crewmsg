@@ -3,13 +3,15 @@ import axios from 'axios'
 // state
 export const state = () => ({
   vacancy: {},
-  vacancies: []
+  vacancies: [],
+  employerVacancies: []
 })
 
 // getters
 export const getters = {
   vacancy: state => state.vacancy,
-  vacancies: state => state.vacancies
+  vacancies: state => state.vacancies,
+  employerVacancies: state => state.employerVacancies
 }
 
 // mutations
@@ -19,23 +21,15 @@ export const mutations = {
   },
   SET_VACANCIES (state, vacancies) {
     state.vacancies = vacancies
+  },
+  SET_EMPLOYER_VACANCIES (state, employerVacancies) {
+    state.employerVacancies = employerVacancies
   }
 }
 
 // actions
 export const actions = {
-  fetchUserVacancies ({ commit, state }, { userId }) {
-    return new Promise((resolve, reject) => {
-      axios.get(`/user/${userId}/vacancies`)
-        .then((response) => {
-          commit('SET_VACANCIES', response.data)
-          resolve(response)
-        })
-        .catch((error) => {
-          reject(error)
-        })
-    })
-  },
+
   create ({ commit }, { item }) {
     return new Promise((resolve, reject) => {
       axios.post(`vacancy/create`, { item })
@@ -71,6 +65,18 @@ export const actions = {
         .catch((error) => {
           reject(error)
         })
+    })
+  },
+  fetchUserVacancies ({ commit, state }, { userId }) {
+    return new Promise((resolve, reject) => {
+      axios.get(`/user/${userId}/vacancies`)
+          .then((response) => {
+            commit('SET_EMPLOYER_VACANCIES', response.data)
+            resolve(response)
+          })
+          .catch((error) => {
+            reject(error)
+          })
     })
   },
   delete ({ commit, dispatch }, data) {

@@ -16,11 +16,10 @@
             <v-app-bar
               class="grey lighten-5"
               elevate-on-scroll
-              scroll-target="#scrolling-techniques-7"
             >
               <v-toolbar-title>Отклики (Feedback)</v-toolbar-title>
 
-              <v-spacer></v-spacer>
+              <v-spacer />
             </v-app-bar>
 
             <v-card-text>
@@ -28,12 +27,24 @@
                 <template v-slot:default>
                   <thead>
                     <tr>
-                      <th class="text-left">№</th>
-                      <th class="text-left">Интервью</th>
-                      <th class="text-left">Добавлён</th>
-                      <th class="text-left">Статус</th>
-                      <th class="text-left">Кол-во вопросов</th>
-                      <th class="text-left">Действие</th>
+                      <th class="text-left">
+                        №
+                      </th>
+                      <th class="text-left">
+                        Интервью
+                      </th>
+                      <th class="text-left">
+                        Добавлён
+                      </th>
+                      <th class="text-left">
+                        Статус
+                      </th>
+                      <th class="text-left">
+                        Кол-во вопросов
+                      </th>
+                      <th class="text-left">
+                        Действие
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -61,36 +72,36 @@
 </template>
 <script>
 export default {
-  layout: "employer",
-  middleware: "role",
+  layout: 'employer',
+  middleware: 'role',
   components: {},
   data: () => ({
     links: [
       {
-        text: "Employer",
+        text: 'Employer',
         disabled: false,
-        href: "/employer",
+        href: '/employer'
       },
       {
-        text: "Отклики",
+        text: 'Отклики',
         disabled: true,
-        href: "/feedback",
-      },
+        href: '/feedback'
+      }
     ],
     desserts: [
       {
-        name: "Frozen Yogurt",
-        calories: 159,
+        name: 'Frozen Yogurt',
+        calories: 159
       },
       {
-        name: "Ice cream sandwich",
-        calories: 237,
+        name: 'Ice cream sandwich',
+        calories: 237
       },
       {
-        name: "Eclair",
-        calories: 262,
-      },
-    ],
-  }),
-};
+        name: 'Eclair',
+        calories: 262
+      }
+    ]
+  })
+}
 </script>

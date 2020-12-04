@@ -84,7 +84,7 @@ export const actions = {
       axios.post('/interview/create', { item })
         .then((response) => {
           if (response.data.id) {
-            dispatch('fetchInterviews')
+            dispatch('fetchInterviews', { userId: item.invite_id })
             resolve(response)
           }
         })

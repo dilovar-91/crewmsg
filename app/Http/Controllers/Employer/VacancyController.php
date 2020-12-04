@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Vacancy;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 class VacancyController extends Controller
 {
@@ -14,13 +13,12 @@ class VacancyController extends Controller
     public function update(Request $request)
     {
         //dd($request);
-        
         $vacancy_id = $request->vacancy_id;
         $vacancy = Vacancy::find($vacancy_id);
         $vacancy->title = $request->title;
         $vacancy->user_id = $request->user_id;
         $vacancy->pic = $request->image;
-        $vacancy->description = $request->content;
+        $vacancy->description = $request->description;
         $vacancy->videointerview = $request->videointerview;
         $vacancy->test = $request->test;
         $vacancy->save();         
@@ -56,15 +54,16 @@ class VacancyController extends Controller
     }
 
 
-    public function save(Request $request)
+    public function create(Request $request)
     {
+        //return response()->json($request, 201);
         $vacancy = new Vacancy;
-        $vacancy->title = $request->title;
-        $vacancy->user_id = $request->user_id;
-        $vacancy->pic = $request->image;        
-        $vacancy->description = $request->content;
-        $vacancy->videointerview = ($request->videointerview == true ? 1 : 0);
-        $vacancy->test = ($request->quiz == true ? 1 : 0);
+        $vacancy->title = $request->item['title'];
+        $vacancy->user_id = $request->item['user_id'];
+        $vacancy->pic = $request->item['pic'];
+        $vacancy->description = $request->item['description'];
+        $vacancy->videointerview = ($request->item['videoInterview'] == true ? 1 : 0);
+        $vacancy->test = ($request->item['test'] == true ? 1 : 0);
         $vacancy->save();
         return response()->json($vacancy, 201);
         

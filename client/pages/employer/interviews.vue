@@ -16,7 +16,6 @@
             <v-app-bar
               class="grey lighten-5"
               elevate-on-scroll
-              scroll-target="#scrolling-techniques-7"
             >
               <v-toolbar-title>Interviews</v-toolbar-title>
 

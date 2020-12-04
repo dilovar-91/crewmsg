@@ -59,5 +59,8 @@ Route::post('interview/update', 'Employer\InterviewController@update');
 Route::get('employer/{id}/interviews', 'Employer\InterviewController@getInterviews');
 
 Route::get('user/{id}/vacancies', 'Employer\VacancyController@vacancies');
+Route::post('vacancy/create', 'Employer\VacancyController@create');
+Route::post('vacancy/update', 'Employer\VacancyController@update');
+Route::post('vacancy/uploadimage', 'Employer\VacancyController@imageUpload');
 
 
