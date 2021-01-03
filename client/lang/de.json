@@ -36,6 +36,10 @@
   "resend_verification_link": "Verifizierungslink erneut senden?",
   "failed_to_verify_email": "E-Mail konnte nicht überprüft werden.",
   "verify_email_address": "Wir haben Ihnen eine E-Mail mit dem Bestätigungslink gesendet.",
+  "home": "Zuhause",
+  "for_sailors": "Für Segler",
+  "for_companies": "Für Unternehmen",
+  "contact": "Kontakte",
   "seamen": {
     "vacancy": "freie Stelle"
   },
@@ -44,9 +48,9 @@
     "for_companies": "Für Unternehmen",
     "for_sailors": "für Meeresfrüchte",
     "home_description": "SCHNELLER START IHRER KARRIERE AM MEER",
-    "hero_title": "Beginnen Sie Ihre maritime Karriere mit einem Klick",
+    "hero_title": "Beginnen Sie Ihre Marinekarriere mit einem Klick",
     "hero_description": "Dies ist eine einfache und effektive Möglichkeit, ein Interview zu führen und gleichzeitig die meisten Informationen über den Bewerber zu erhalten. Probieren Sie es aus! Der Dienst hat viel Arbeit, um einen Erfahrungsschatz mit einer Tradition der Innovation zu verbinden bietet professionelle Besatzung in einem erstklassigen Zustand. ",
-    "join_us": "Begleiten Sie uns",
+    "try_it": "Versuch es",
     "features": {
       "our_services": "Unsere Dienstleistungen",
       "description": "Unsere Erfahrung in der Seeschifffahrt gibt einen einzigartigen Einblick in die Versicherung der Beschäftigung von Seeleuten. Wir haben einen vertrauenswürdigen Ruf bei unseren Kunden und Partnern.",
@@ -57,7 +61,7 @@
       "quality_management": "Qualitätsmanagement",
       "quality_management_description": "Ein Team qualifizierter Spezialisten erreicht die gesetzten Ziele aufgrund des implementierten Qualitätssystems und -managements.",
       "support": "Unterstützung 24/7",
-      "support_description": "Unsere Manager sind immer bereit, Ihre Fragen zu jeder Tageszeit zu beantworten.",
+      "support_description": "Unser Manager beantwortet Ihre Fragen zu jeder Tageszeit. Verwenden Sie einen beliebigen praktischen Messenger, um mit OneClick Marine zu kommunizieren.",
       "most_demand": "Am anspruchsvollsten",
       "most_demand_description": "Wir garantieren anspruchsvollste und dringendste Stellenangebote. Unser Team konzentriert sich stark darauf, für jeden Mitarbeiter neue Top-Angebote zu finden.",
       "light_services": "Lichtdienste",

@@ -26,7 +26,7 @@
             :class="$vuetify.breakpoint.smAndDown ? 'flex-column align-start' : 'align-center'"
             class="d-flex flex-wrap"
           >
-            <base-btn>{{ $t('home_page.join_us') }}</base-btn>
+            <base-btn>{{ $t('home_page.try_it') }}</base-btn>
           </div>
         </v-responsive>
       </v-container>

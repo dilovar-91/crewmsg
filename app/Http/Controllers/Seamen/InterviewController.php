@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Seamen;
 
 use App\Http\Controllers\Controller;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
 use App\Models\Interview;
 use App\Models\User;
@@ -55,22 +56,21 @@ class InterviewController extends Controller
     }
 
     public function videoSend(Request $request){
-//        /return response()->json($request, 201);
+        //return response()->json($request, 201);
         $data = $this->validate($request, [
-            'blob'        => 'required',
+            'file'        => 'required',
         ]);
         $filename = time() . "_". uniqid();
         Storage::disk('public')
-            ->put('videos/'.$filename.'.webm', file_get_contents($request->blob));
+            ->put('videos/'.$filename.'.webm', file_get_contents($request->file));
         
-        $answer = new Answer;
-        $answer->invite_id = $request->invite_id;
-        $answer->question_id = $request->question_id;
-        $answer->answer = $filename.'.mp4';
-        $answer->user_id = $request->user_id;
-        $answer->comment = $request->comment ?? '';
-        $answer->save();
-        ProcessVideoConvert::dispatch($answer);
+        $feedback = new Feedback();
+        $feedback->invite_id = $request->invite_id;
+        $feedback->user_id = $request->user_id;
+        $feedback->video = $filename.'.mp4';
+        $feedback->comment = $request->comment ?? '';
+        $feedback->save();
+        ProcessVideoConvert::dispatch($feedback);
         // return response()->json(['status'=>'success']);
         return response()->json($answer, 201);
     }

@@ -10,7 +10,7 @@ const page = path => () => {
 
 const routes = [
   { path: '/', name: 'home', component: page('home.vue') },
-  { path: '/about', name: 'about', component: page('about.vue') },
+  { path: '/contact', name: 'contact', component: page('contact.vue') },
   { path: '/companies', name: 'companies', component: page('companies.vue') },
   { path: '/sailors', name: 'sailors', component: page('sailors.vue') },
 

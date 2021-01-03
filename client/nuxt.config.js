@@ -6,7 +6,7 @@ module.exports = {
   mode: 'universal', // Comment this for SSR
 
   server: {
-    // port: process.env.APP_PORT || 9000, // default: 3000
+    port: process.env.APP_PORT || 9000 // default: 3000
     // host: '0.0.0.0' // default: localhost
   },
   srcDir: __dirname,
@@ -31,7 +31,8 @@ module.exports = {
     ]
   },
 
-  loading: { color: '#007bff' },
+  // loading: { color: '#007bff' },
+  loading: '~/components/loading.vue',
 
   router: {
     middleware: ['locale', 'check-auth']

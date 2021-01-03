@@ -1,6 +1,6 @@
 <template>
   <base-section id="pro-features" :space="32">
-    <v-img :src="'/img/logo.svg'" class="mx-auto mb-8" max-width="128" />
+    <v-img :src="'/logo-free.png'" class="mx-auto mb-8" max-width="128" />
 
     <base-section-heading title="Feature Comparison">
       Get the PRO version of
@@ -55,44 +55,6 @@
             </tbody>
           </v-simple-table>
         </v-col>
-
-        <v-col cols="12" md="5">
-          <v-card elevation="16" class="mb-12">
-            <v-img
-              class="pointer"
-              max-width="100%"
-              src="/images/videoposter.png"
-              @click.stop="dialog = true"
-            />
-
-            <v-dialog v-model="dialog" class="mb-0">
-              <iframe
-                v-if="dialog"
-                width="940"
-                height="528"
-                src="https://www.youtube.com/embed/UOZ2hBWdNr0"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-            </v-dialog>
-          </v-card>
-
-          <div class="text-center">
-            <base-btn
-              :tile="false"
-              color="primary"
-              href="https://store.vuetifyjs.com/product/zero-theme-pro/?ref=vtyd-pro-page-features"
-              rounded
-              to="/register"
-            >
-              {{ $t('home_page.join_us') }}
-              <v-icon right>
-                mdi-rocket
-              </v-icon>
-            </base-btn>
-          </div>
-        </v-col>
       </v-row>
     </v-container>
   </base-section>
@@ -101,9 +63,7 @@
 <script>
 export default {
   name: 'SectionProChart',
-
   data: () => ({
-    dialog: false,
     features: [
       ['Components', 23, '40+'],
       ['Example Pages', 3, 10],

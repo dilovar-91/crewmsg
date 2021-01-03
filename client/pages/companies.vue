@@ -1,8 +1,7 @@
 <template>
   <div>
     <Hero />
-    <ThemeFeatures />
-
+    <OurServices />
     <Features />
     <ProFeatures />
     <ContactUs />
@@ -17,7 +16,7 @@
 
 <script>
 import Hero from '@/pages/sections/Hero'
-import ThemeFeatures from '@/pages/sections/ThemeFeatures'
+import OurServices from '@/pages/sections/OurServices'
 import Features from '@/pages/sections/Features'
 import ContactUs from '@/pages/sections/ContactUs'
 import Affiliates from '@/pages/sections/Affiliates'
@@ -33,7 +32,7 @@ export default {
 
   components: {
     Hero,
-    ThemeFeatures,
+    OurServices,
     Features,
     ContactUs,
     Affiliates,

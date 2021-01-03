@@ -9,17 +9,17 @@
       <div>
         <v-tabs class="hidden-sm-and-down mr-1" optional background-color="transparent">
           <v-tab
-            v-for="(name, i) in items"
+            v-for="(item, i) in links"
             :key="i"
-            :to="{ name }"
-            :exact="name === 'Home'"
-            :ripple="false"
+            :to="item.route"
+            :exact="item.route === $nuxt.$route.name"
+            :ripple="true"
             active-class="white--text "
             class="font-weight-bold white--text"
             min-width="96"
             text
           >
-            {{ name }}
+            {{ item.title }}
           </v-tab>
         </v-tabs>
       </div>
@@ -35,23 +35,35 @@
 <script>
 export default {
   name: 'HomeAppBar',
-
   components: {
     HomeDrawer: () => import('./Drawer'),
-    LocaleDropdown: () => import('@/components/LocaleDropdown')
+    LocaleDropdown: () => import('~/components/LocaleDropdown')
   },
-
-  data: () => ({
+  data: vm => ({
     drawer: null,
-    items: ['Home', 'For sailors', 'For Companies', 'Contact']
+    links: [
+      {
+        title: vm.$t('home'),
+        route: '/'
+      },
+      {
+        title: vm.$t('for_sailors'),
+        route: 'sailors'
+      },
+      {
+        title: vm.$t('for_companies'),
+        route: 'companies'
+      },
+      {
+        title: vm.$t('contact'),
+        route: 'contact'
+      }
+    ]
   })
 }
 </script>
-
 <style lang="css">
 #home-app-bar {
-  /*background-color: rgba(4, 25, 44, 0.76) !important;*/
- /* background-color: rgb(24 42 62 / 85%) !important; */
   background-color: #203041 !important;
 }
 </style>

@@ -150,8 +150,11 @@ export default {
     currentTime (time) {
       if (time === 0) {
         this.stopTimer()
-        this.player.record().pause()
-        this.expand = false
+        if ((this.questionNumber + 1) < this.total) {
+          console.log(this.questionNumber + '-' + this.total)
+          this.player.record().pause()
+          this.expand = false
+        }
         this.isRecorded = true
         setTimeout(() => {
           this.recordSend()
@@ -187,6 +190,9 @@ export default {
     this.player.on('resumeRecord', function () {
       console.log('resume recording')
     })
+    this.player.on('stopRecord', function () {
+      console.log('stopped recording')
+    })
     // error handling
     this.player.on('error', (element, error) => {
       console.warn(error)
@@ -210,9 +216,9 @@ export default {
     }
   },
   beforeDestroy () {
-    if (this.player) {
-      this.player.dispose()
-    }
+    // if (this.player) {
+    //  this.player.dispose()
+   // }
   },
   methods: {
     recordSend () {
@@ -225,29 +231,22 @@ export default {
         this.isRecorded = false
         this.currentTime = this.currentQuestion.time
         this.startTimer()
-        // this.player.reset()
-        // this.player.recordToggle.enable()
-        // this.player.record().getDevice()
-        // this.player.record().start()
-        // this.isRecorded = false
       } else {
         this.isFinished = true
+        /// this.player.record().stop()
         const formData = new FormData()
         const blobSend = this.player.recordedData
-        console.log(blobSend)
-        formData.append('blob', blobSend)
+        // console.log(blobSend)
+        formData.append('file', blobSend, blobSend.name)
         formData.append('invite_id', this.inviteId)
-        formData.append('question_id', this.currentQuestion.id)
         formData.append('user_id', this.userId)
-        formData.append('comment', this.comment)
         axios.post('/seamen/interview/videosend', formData,
           {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          }
+          }, 30000
         ).then((res) => {
-          // loader.hide()
           this.$swal({
             position: 'top-end',
             icon: 'success',
@@ -256,6 +255,7 @@ export default {
             showConfirmButton: false,
             timer: 2500
           })
+          setTimeout(this.$router.push('/seamen/interviews'), 2400)
           // eslint-disable-next-line handle-callback-err
         }).catch((err) => {
           this.$swal({
@@ -267,7 +267,6 @@ export default {
             timer: 2500
           })
         })
-        axios.post('/seamen/interview/invited', { invite_id: this.inviteId })
         if (this.player) {
           this.player.dispose()
         }
@@ -285,10 +284,6 @@ export default {
       clearTimeout(this.timer)
     }
   }
-  /* beforeRouteLeave (to, from, next) {
-
-    next()
-  } */
 }
 </script>
 
