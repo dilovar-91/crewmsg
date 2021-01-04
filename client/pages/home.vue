@@ -5,9 +5,7 @@
     <Features />
     <ProFeatures />
     <ContactUs />
-    <Affiliates />
     <KeepInTouch />
-    <Newsletter />
     <Info />
   </div>
 </template>

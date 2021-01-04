@@ -78,6 +78,35 @@
       "creative_solutions_description": "We work globally but maintain a personal approach to each customer, providing you with complete assurance during our cooperation. Our team offer solutions for every aspect of your employment.",
       "work_at_sea": "Work at sea",
       "work_at_sea_description": "We understand that as well as being your passion, sea is a work. Our dedicated and professional team will ensure it always provides maximum return."
+    },
+    "contact_us": {
+      "title": "ЕСТЬ ВОПРОСЫ? ДАЙТЕ НАМ ЗНАТЬ!",
+      "description": "Наш менеджер готов ответить на Ваши вопросы в любое время суток.",
+      "button": "Пишите нам"
+    },
+    "keep_in_touch": {
+      "title": "СВЯЗАТЬСЯ С НАМИ",
+      "description": "Мы на связи. Используйте любой удобный для Вас мессенджер. Наш менеджер всегда на связи и ответит на любой интересующий Вас вопрос.",
+      "address": "Украина, Одесса",
+      "phone": "+380 (93) 510 18 02",
+      "email": "info@oneclickmarine.com",
+      "mail_us": "НАПИШИТЕ НАМ",
+      "name": "Имя",
+      "your_email": "Эл. почта",
+      "subject": "Тема",
+      "message": "Сообщение",
+      "send": "Отправить"
+    },
+    "feature_comparison": {
+      "title": "OneClick Pro",
+      "demo": "Демо",
+      "pro": "Про",
+      "description": "С OneClick Pro Вы получаете:",
+      "personal_assistant": "Личный онлайн помощник",
+      "access": "Доступ ко всей базе кандидатов и вакансий ",
+      "purpose": "Авторские тесты для прохождения интервью",
+      "candidate": "Неограниченное количество кандидатов",
+      "online_directory": "Онлайн справочник"
     }
   }
 }

@@ -11,6 +11,7 @@
       </div>
 
       <base-title
+        v-if="false"
         size="body-1"
         class="d-flex justify-center"
         space="4"
@@ -18,7 +19,12 @@
         weight="regular"
       />
 
-      <base-body>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur.</base-body>
+      <base-body>
+        OneClick Marine is  for seamen and crewing companies.
+        When using the site material add an active link.
+
+        Your personal data is protected.
+      </base-body>
 
       <v-btn class="mb-4" color="primary" to="/about">
         More Info

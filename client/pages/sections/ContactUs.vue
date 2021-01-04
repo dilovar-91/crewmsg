@@ -10,12 +10,12 @@
           <v-col cols="10">
             <base-title
               :space="$vuetify.breakpoint.mdAndUp ? 0 : 4"
-              title="HAVE QUESTIONS? LET US KNOW!"
+              :title="$t('home_page.contact_us.title')"
             />
 
             <base-body space="0">
               <span class="white--text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor itaque modi ab accusantium architecto voluptates ipsa molestiae.
+                {{ $t('home_page.contact_us.description') }}
               </span>
             </base-body>
           </v-col>
@@ -27,12 +27,12 @@
             <base-btn
               :block="$vuetify.breakpoint.smAndDown"
               color="white"
-              href="mailto:shop@vuetifyjs.com?subject=Zero%20Theme%20Question"
+              href="mailto:info@oneclickmarine.com"
               large
               outlined
               target="_blank"
             >
-              Contact Us
+              {{ $t('home_page.contact_us.button') }}
             </base-btn>
           </v-col>
         </v-row>
@@ -43,6 +43,6 @@
 
 <script>
   export default {
-    name: 'SectionContactUs',
+    name: 'SectionContactUs'
   }
 </script>

@@ -7,7 +7,6 @@
       >
         <slot />
       </base-info-card>
-
       <template v-for="({ icon, text, title: t }, i) in business">
         <base-avatar-card
           :key="i"
@@ -20,13 +19,13 @@
         >
           <!-- Do not use v-html for user -->
           <!-- provided values -->
-          <div v-html="text" />
+          <div class="mt-6" v-text="text" />
         </base-avatar-card>
 
         <v-divider
           v-if="i + 1 !== business.length"
           :key="`divider-${i}`"
-          class="my-2"
+          class="my-1"
         />
       </template>
     </div>
@@ -40,27 +39,28 @@
     props: {
       dark: Boolean,
       dense: Boolean,
-      title: String,
+      title: String
     },
-
-    data: () => ({
-      business: [
-        {
-          icon: 'mdi-map-marker-outline',
-          title: 'Address',
-          text: '8553 N. Beach St. Ste. 227<br>Fort Worth, Texas 76137',
-        },
-        {
-          icon: 'mdi-cellphone',
-          title: 'Phone',
-          text: '01 (800) 433 744<br>01 (800) 433 633',
-        },
-        {
-          icon: 'mdi-email',
-          title: 'Email',
-          text: 'john@vuetifyjs.com<br>heather@vuetifyjs.com',
-        },
-      ],
-    }),
+    computed: {
+      business () {
+        return [
+          {
+            icon: 'mdi-map-marker-outline',
+            title: 'Address',
+            text: this.$t('home_page.keep_in_touch.address')
+          },
+          {
+            icon: 'mdi-cellphone',
+            title: 'Phone',
+            text: this.$t('home_page.keep_in_touch.phone')
+          },
+          {
+            icon: 'mdi-email',
+            title: 'Email',
+            text: this.$t('home_page.keep_in_touch.email')
+          }
+        ]
+      }
+    }
   }
 </script>

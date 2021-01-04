@@ -2,10 +2,8 @@
   <base-section id="pro-features" :space="32">
     <v-img :src="'/logo-free.png'" class="mx-auto mb-8" max-width="128" />
 
-    <base-section-heading title="Feature Comparison">
-      Get the PRO version of
-      <strong>Zero</strong> and level up your theme
-      <br>with additional components, pages, and Free updates.
+    <base-section-heading :title="$t('home_page.feature_comparison.title')">
+      {{ $t('home_page.feature_comparison.description') }}
     </base-section-heading>
 
     <v-container>
@@ -16,10 +14,10 @@
               <tr>
                 <th />
                 <th class="body-1 font-weight-bold text-center">
-                  What's in the Demo?
+                  {{ $t('home_page.feature_comparison.demo') }}
                 </th>
                 <th class="body-1 font-weight-bold text-center">
-                  What's in the PRO version?
+                  {{ $t('home_page.feature_comparison.pro') }}
                 </th>
               </tr>
             </thead>
@@ -63,17 +61,17 @@
 <script>
 export default {
   name: 'SectionProChart',
-  data: () => ({
-    features: [
-      ['Components', 23, '40+'],
-      ['Example Pages', 3, 10],
-      ['Bugfixes and Issues', true, true],
-      ['Vue CLI Support', true, true],
-      ['News, Project, and Pricing Pages', false, true],
-      ['6 Months Free Updates', false, true],
-      ['Price', 'Free', '$60']
-    ]
-  })
+  computed: {
+    features () {
+      return [
+        [this.$t('home_page.feature_comparison.personal_assistant'), false, true],
+        [this.$t('home_page.feature_comparison.access'), false, true],
+        [this.$t('home_page.feature_comparison.purpose'), true, true],
+        [this.$t('home_page.feature_comparison.candidate'), false, true],
+        [this.$t('home_page.feature_comparison.online_directory'), false, true]
+      ]
+    }
+  }
 }
 </script>
 <style scoped>

@@ -39,27 +39,32 @@ export default {
     HomeDrawer: () => import('./Drawer'),
     LocaleDropdown: () => import('~/components/LocaleDropdown')
   },
-  data: vm => ({
-    drawer: null,
-    links: [
-      {
-        title: vm.$t('home'),
-        route: '/'
-      },
-      {
-        title: vm.$t('for_sailors'),
-        route: 'sailors'
-      },
-      {
-        title: vm.$t('for_companies'),
-        route: 'companies'
-      },
-      {
-        title: vm.$t('contact'),
-        route: 'contact'
-      }
-    ]
-  })
+  data: () => ({
+    drawer: null
+
+  }),
+  computed: {
+    links () {
+      return [
+        {
+          title: this.$t('home'),
+          route: '/'
+        },
+        {
+          title: this.$t('for_sailors'),
+          route: 'sailors'
+        },
+        {
+          title: this.$t('for_companies'),
+          route: 'companies'
+        },
+        {
+          title: this.$t('contact'),
+          route: 'contact'
+        }
+      ]
+    }
+  }
 }
 </script>
 <style lang="css">

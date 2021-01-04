@@ -24,7 +24,7 @@
           cols="12"
           md="6"
         >
-          Copyright &copy; 2020 OneClickMarine.Com, LLC
+          Copyright &copy; {{ $moment().format("YYYY") }} OneClickMarine.Com, LLC
         </v-col>
       </v-row>
     </v-container>
@@ -39,19 +39,19 @@ export default {
     socials: [
       {
         name: 'Facebook',
-        link: 'https://www.facebook.com/groups/325275011585933'
+        link: 'https://www.facebook.com/oneclickmarine'
       },
       {
         name: 'Instagram',
-        link: 'https://www.instagram.com/crewmsg/'
+        link: 'https://www.instagram.com/oneclick_marine/'
       },
       {
         name: 'Telegram',
-        link: 'https://t.me/crewmsg'
+        link: 'https://t.me/oneclickmarine'
       },
       {
         name: 'LinkedIn',
-        link: 'https://www.linkedin.com/company/crewmsg/'
+        link: 'https://www.linkedin.com/company/oneclickmarine/'
       }
 
     ]

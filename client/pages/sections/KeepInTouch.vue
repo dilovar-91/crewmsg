@@ -9,8 +9,8 @@
           cols="12"
           md="5"
         >
-          <base-business-info title="KEEP IN TOUCH WITH US">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur quidem, quis modi iure nihil commodi suscipit, corporis dicta adipisci, voluptatum quia cupiditate.
+          <base-business-info :title="$t('home_page.keep_in_touch.title')">
+            {{ $t('home_page.keep_in_touch.description') }}
           </base-business-info>
         </v-col>
 
@@ -18,7 +18,7 @@
           cols="12"
           md="6"
         >
-          <base-contact-form title="MAIL US YOUR MESSAGE" />
+          <base-contact-form :title="$t('home_page.keep_in_touch.mail_us')" />
         </v-col>
       </v-row>
     </v-container>
@@ -27,6 +27,6 @@
 
 <script>
   export default {
-    name: 'SectionKeepInTouch',
+    name: 'SectionKeepInTouch'
   }
 </script>

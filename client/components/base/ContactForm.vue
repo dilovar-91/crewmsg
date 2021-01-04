@@ -7,15 +7,15 @@
       color="primary"
     />
 
-    <base-text-field label="Name" />
+    <base-text-field :label="$t('home_page.keep_in_touch.name')" />
 
-    <base-text-field label="Email" />
+    <base-text-field :label="$t('home_page.keep_in_touch.your_email')" />
 
-    <base-text-field label="Subject" />
+    <base-text-field :label="$t('home_page.keep_in_touch.subject')" />
 
     <base-textarea
       class="mb-6"
-      label="Your Need & Description"
+      :label="$t('home_page.keep_in_touch.message')"
     />
 
     <base-btn
@@ -24,7 +24,7 @@
       outlined
       target="_blank"
     >
-      Send message
+      {{ $t('home_page.keep_in_touch.send') }}
     </base-btn>
   </div>
 </template>
@@ -40,8 +40,8 @@
       subtitle: String,
       title: {
         type: String,
-        default: 'MAIL US YOUR MESSAGE',
-      },
-    },
+        default: 'MAIL US YOUR MESSAGE'
+      }
+    }
   }
 </script>

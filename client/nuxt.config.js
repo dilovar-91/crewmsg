@@ -13,7 +13,7 @@ module.exports = {
 
   env: {
     apiUrl: process.env.apiUrl || process.env.APP_URL + '/api',
-    appName: process.env.APP_NAME || 'CrewMsg',
+    appName: process.env.APP_NAME || 'OneClickMarine',
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
@@ -101,7 +101,8 @@ module.exports = {
 
   buildModules: [
     // With options
-    ['@nuxtjs/vuetify']
+    ['@nuxtjs/vuetify'],
+    '@nuxtjs/moment'
   ],
 
   vuetify: {
