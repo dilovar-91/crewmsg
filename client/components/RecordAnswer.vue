@@ -234,9 +234,11 @@ export default {
       } else {
         this.isFinished = true
         /// this.player.record().stop()
+        console.log(this.player)
         if (this.player) {
           this.player.dispose()
         }
+        console.log(this.player)
         const formData = new FormData()
         const blobSend = this.player.recordedData
         console.log(blobSend)
