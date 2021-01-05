@@ -3,53 +3,57 @@
     <v-col cols="12" sm="10" md="5">
       <v-card class="elevation-12">
         <v-toolbar color="primary white--text" flat>
-          <v-toolbar-title>{{ $t('login')}}</v-toolbar-title>
-          <v-spacer></v-spacer>
+          <v-toolbar-title>{{ $t('login') }}</v-toolbar-title>
+          <v-spacer />
         </v-toolbar>
         <v-form
-          @submit.prevent="login"
-          @keydown="form.onKeydown($event)"
-          v-model="valid"
           id="login-form"
           ref="form"
+          v-model="valid"
+          @submit.prevent="login"
+          @keydown="form.onKeydown($event)"
         >
           <v-card-text>
             <v-text-field
-              :label="$t('email')"
               v-model="form.email"
+              :label="$t('email')"
               name="login"
               :rules="emailRules"
               prepend-icon="mdi-account"
               type="email"
               required
-            ></v-text-field>
+            />
 
             <v-text-field
               id="password"
-              :label="$t('password')"
               v-model="form.password"
+              :label="$t('password')"
               name="password"
               prepend-icon="mdi-lock"
               type="password"
               required
-            ></v-text-field>
+            />
           </v-card-text>
           <v-card-actions>
-            <v-checkbox class="mt-0" v-model="remember" :label="$t('remember_me')"></v-checkbox>
+            <v-checkbox v-model="remember" class="mt-0" :label="$t('remember_me')" />
 
             <router-link
               :to="{ name: 'password.request' }"
               class="ml-2 mb-4"
-            >{{ $t('forgot_password') }}</router-link>
-            <v-spacer></v-spacer>
+            >
+              {{ $t('forgot_password') }}
+            </router-link>
+            <v-spacer />
             <v-btn
               :disabled="!valid"
               color="primary"
               class="mt-0"
               :loading="form.busy"
-              @click="login()"
               form="login-form"
-            >{{$t('login')}}</v-btn>
+              @click="login()"
+            >
+              {{ $t('login') }}
+            </v-btn>
             <login-with-github />
           </v-card-actions>
         </v-form>
@@ -75,80 +79,80 @@
 </template>
 
 <script>
-import Form from "vform";
+import Form from 'vform'
 
 export default {
-  layout: "simple",
+  layout: 'simple',
 
-  head() {
-    return { title: this.$t("login") };
+  head () {
+    return { title: this.$t('login') }
   },
 
   data: () => ({
     form: new Form({
-      email: "",
-      password: "",
+      email: '',
+      password: ''
     }),
     valid: true,
     emailRules: [
-      (v) => !!v || "E-mail is required",
-      (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      v => !!v || 'E-mail is required',
+      v => /.+@.+\..+/.test(v) || 'E-mail must be valid'
     ],
     remember: false,
 
-    //snackbar
-    color: "",
+    // snackbar
+    color: '',
     snackbar: false,
-    text: "",
+    text: '',
     timeout: 6000,
     x: null,
-    y: "top",
+    y: 'top'
   }),
 
   methods: {
-    async login() {
-      let data;
+    async login () {
+      let data
 
       // Submit the form.
       try {
-        const response = await this.form.post("/login");
-        data = response.data;
-        this.showSnack("success", "You successfull logined in");
+        const response = await this.form.post('/login')
+        data = response.data
+        this.showSnack('success', 'You successfull logined in')
       } catch (e) {
-        var error = e.response.data.message;
+        let error = e.response.data.message
 
         if (!error) {
-          error = e.response.data.error;
+          error = e.response.data.error
         }
 
-        this.showSnack("error", error);
-        return;
+        this.showSnack('error', error)
+        return
       }
 
       // Save the token.
-      this.$store.dispatch("auth/saveToken", {
+      this.$store.dispatch('auth/saveToken', {
         token: data.token,
         remember: this.remember,
-        role: data.role,
-      });
+        role: data.role
+      })
 
       // Fetch the user.
-      await this.$store.dispatch("auth/fetchUser");
+      await this.$store.dispatch('auth/fetchUser')
 
       // Redirect home.
-      this.$router.push("/" + (data.role || "")).catch((error) => {
-        if (error.name != "NavigationDuplicated") {
-          throw error;
+      this.$router.push('/' + (data.role || '')).catch((error) => {
+        if (error.name != 'NavigationDuplicated') {
+          throw error
         }
-        console.log(error);
-      });
+        console.log(error)
+      })
     },
 
-    showSnack(type, text) {
-      this.text = text;
-      this.color = type;
-      this.snackbar = true;
-    },
-  },
-};
+    showSnack (type, text) {
+      this.text = text
+      this.color = type
+      this.snackbar = true
+    }
+  }
+}
 </script>

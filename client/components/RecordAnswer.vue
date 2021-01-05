@@ -236,7 +236,7 @@ export default {
         /// this.player.record().stop()
         const formData = new FormData()
         const blobSend = this.player.recordedData
-        // console.log(blobSend)
+        console.log(blobSend)
         formData.append('file', blobSend, blobSend.name)
         formData.append('invite_id', this.inviteId)
         formData.append('user_id', this.userId)
