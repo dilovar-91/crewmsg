@@ -191,7 +191,7 @@ export default {
       console.log('resume recording')
     })
     this.player.on('stopRecord', function () {
-      console.log('stopped recording')
+      console.log('stopped recording', this.player.recordedData)
     })
     // error handling
     this.player.on('error', (element, error) => {
