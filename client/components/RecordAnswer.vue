@@ -234,6 +234,9 @@ export default {
       } else {
         this.isFinished = true
         /// this.player.record().stop()
+        if (this.player) {
+          this.player.dispose()
+        }
         const formData = new FormData()
         const blobSend = this.player.recordedData
         console.log(blobSend)
@@ -267,9 +270,6 @@ export default {
             timer: 2500
           })
         })
-        if (this.player) {
-          this.player.dispose()
-        }
       }
     },
     nextStep () {
