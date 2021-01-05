@@ -71,7 +71,6 @@ class InterviewController extends Controller
         $feedback->comment = $request->comment ?? '';
         $feedback->save();
         ProcessVideoConvert::dispatch($feedback);
-        // return response()->json(['status'=>'success']);
         return response()->json($feedback, 201);
     }
 
