@@ -3,7 +3,7 @@ const { join } = require('path')
 const { copySync, removeSync } = require('fs-extra')
 
 module.exports = {
-  mode: 'spa', // Comment this for SSR
+  mode: 'universal', // Comment this for SSR
 
   server: {
     port: process.env.APP_PORT || 9000 // default: 3000
