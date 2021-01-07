@@ -194,6 +194,9 @@ export default {
     this.player.on('stopRecord', function () {
       console.log('stopped recording', this.player.recordedData)
     })
+    this.player.on('finishRecord', function () {
+      console.log('finished recording', this.player)
+    })
     // error handling
     this.player.on('error', (element, error) => {
       console.warn(error)
@@ -234,11 +237,8 @@ export default {
         this.startTimer()
       } else {
         this.isFinished = true
-        /// this.player.record().stop()
-        console.log(this.player)
-        if (this.player) {
-          this.player.dispose()
-        }
+        // this.player.record().stop()
+
         console.log(this.player)
         const formData = new FormData()
         const blobSend = this.player.recordedData
@@ -273,6 +273,9 @@ export default {
             timer: 2500
           })
         })
+        if (this.player) {
+          this.player.dispose()
+        }
       }
     },
     nextStep () {
