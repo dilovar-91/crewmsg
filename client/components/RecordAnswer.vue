@@ -139,6 +139,7 @@ export default {
             audio: true,
             video: true,
             debug: true,
+            videoMimeType: 'video/webm;codecs=vp8,opus',
             maxLength: this.totalTime
           }
         }
