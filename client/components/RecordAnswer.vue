@@ -156,10 +156,10 @@ export default {
           this.player.record().pause()
           this.expand = false
         }
-        this.isRecorded = true
         setTimeout(() => {
           this.recordSend()
         }, 1000)
+        this.isRecorded = true
       }
     }
   },
@@ -198,8 +198,7 @@ export default {
       // the blob object contains the recorded data that
       // can be downloaded by the user, stored on server etc.
       console.log('finished recording: ', this.player.recordedData)
-
-      this.player.record().saveAs({ 'video': 'my-video-file-name.webm' })
+      console.log(this.player.recordedData.name)
     })
 
     // error handling
@@ -243,7 +242,6 @@ export default {
       } else {
         this.isFinished = true
         // this.player.record().stop()
-
         console.log(this.player)
         const formData = new FormData()
         const blobSend = this.player.recordedData
