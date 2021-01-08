@@ -193,6 +193,12 @@ export default {
     this.player.on('stopRecord', function () {
       console.log('stopped recording')
     })
+    this.player.on('finishRecord', function () {
+      // the blob object contains the recorded data that
+      // can be downloaded by the user, stored on server etc.
+      console.log('finished recording: ', this.player.recordedData)
+    })
+
     // error handling
     this.player.on('error', (element, error) => {
       console.warn(error)
