@@ -9,21 +9,16 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use App\Models\Feedback;
 use \FFMpeg;
-use FFMpeg\Filters\Video\VideoFilters;
 
 class ProcessVideoConvert implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $answer;
-    /**
-     * Create a new job instance.
-     *
-     * @return void
-     */
-    public function __construct(Feedback $feedback)
+
+    protected $feedback;
+    public function __construct($feedback)
     {
-        $this->$feedback = $feedback;
+        $this->feedback = $feedback;
     }
 
     /**
@@ -33,7 +28,6 @@ class ProcessVideoConvert implements ShouldQueue
      */
     public function handle()
     {
-        
         $feedback = $this->feedback;
         $file = substr($feedback->video, 0, -4);
         FFMpeg::fromDisk('public')
@@ -42,6 +36,5 @@ class ProcessVideoConvert implements ShouldQueue
             ->toDisk('public')
             ->inFormat(new FFMpeg\Format\Video\X264('libmp3lame', 'libx264'))
             ->save('videos/'.$feedback->video);
-
     }
 }

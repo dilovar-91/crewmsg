@@ -139,6 +139,7 @@ export default {
             audio: true,
             video: true,
             debug: true,
+            videoMimeType: 'video/webm;codecs=vp8,opus',
             maxLength: this.totalTime
           }
         }
@@ -191,7 +192,10 @@ export default {
       console.log('resume recording')
     })
     this.player.on('stopRecord', function () {
-      console.log('stopped recording')
+      console.log('stopped recording', this.player.recordedData)
+    })
+    this.player.on('finishRecord', function () {
+      console.log('finished recording', this.player)
     })
     this.player.on('finishRecord', function () {
       // the blob object contains the recorded data that
@@ -239,10 +243,12 @@ export default {
         this.startTimer()
       } else {
         this.isFinished = true
-        /// this.player.record().stop()
+        // this.player.record().stop()
+
+        console.log(this.player)
         const formData = new FormData()
         const blobSend = this.player.recordedData
-        // console.log(blobSend)
+        console.log(blobSend)
         formData.append('file', blobSend, blobSend.name)
         formData.append('invite_id', this.inviteId)
         formData.append('user_id', this.userId)
