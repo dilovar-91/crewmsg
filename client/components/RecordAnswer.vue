@@ -195,9 +195,6 @@ export default {
       console.log('stopped recording', this.player.recordedData)
     })
     this.player.on('finishRecord', function () {
-      console.log('finished recording', this.player)
-    })
-    this.player.on('finishRecord', function () {
       // the blob object contains the recorded data that
       // can be downloaded by the user, stored on server etc.
       console.log('finished recording: ', this.player.recordedData)
