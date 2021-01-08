@@ -198,6 +198,8 @@ export default {
       // the blob object contains the recorded data that
       // can be downloaded by the user, stored on server etc.
       console.log('finished recording: ', this.player.recordedData)
+
+      this.player.record().saveAs({ 'video': 'my-video-file-name.webm' })
     })
 
     // error handling
