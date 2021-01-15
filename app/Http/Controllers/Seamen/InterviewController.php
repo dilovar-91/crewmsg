@@ -56,7 +56,7 @@ class InterviewController extends Controller
     }
 
     public function videoSend(Request $request){
-        return response()->json($request, 201);
+        return response()->json($request, 200);
         $data = $this->validate($request, [
             'file'        => 'required',
         ]);
