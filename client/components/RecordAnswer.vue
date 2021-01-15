@@ -153,7 +153,7 @@ export default {
         this.stopTimer()
         if ((this.questionNumber + 1) < this.total) {
           console.log(this.questionNumber + '-' + this.total)
-          this.player.record().pause()
+          // this.player.record().pause()
           this.expand = false
         }
         setTimeout(() => {
@@ -197,8 +197,7 @@ export default {
     this.player.on('finishRecord', function () {
       // the blob object contains the recorded data that
       // can be downloaded by the user, stored on server etc.
-      console.log('finished recording: ', this.player.recordedData)
-      console.log(this.player.recordedData.name)
+      console.log('finished recording: ')
     })
 
     // error handling
@@ -235,13 +234,12 @@ export default {
       if (this.questionNumber < this.total) {
         this.expand = true
         this.next()
-        this.player.record().resume()
+        // this.player.record().resume()
         this.isRecorded = false
         this.currentTime = this.currentQuestion.time
         this.startTimer()
       } else {
         this.isFinished = true
-        // this.player.record().stop()
         console.log(this.player)
         const formData = new FormData()
         const blobSend = this.player.recordedData
