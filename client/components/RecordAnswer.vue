@@ -183,13 +183,13 @@ export default {
     this.player.on('startRecord', () => {
       // this.player.record().getDevice();
       this.startTimer()
-      console.log('started recording!')
+      console.log('started recording!', this.player.recordedData)
     })
     this.player.on('pauseRecord', function () {
-      console.log('pause recording')
+      console.log('pause recording', this.player.recordedData)
     })
     this.player.on('resumeRecord', function () {
-      console.log('resume recording')
+      console.log('resume recording', this.player.recordedData)
     })
     this.player.on('stopRecord', function () {
       console.log('stopped recording', this.player.recordedData)
