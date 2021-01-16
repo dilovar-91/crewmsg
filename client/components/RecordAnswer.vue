@@ -247,12 +247,13 @@ export default {
         formData.append('file', blobSend, blobSend.name)
         formData.append('invite_id', this.inviteId)
         formData.append('user_id', this.userId)
+        console.log(formData)
         axios.post('/seamen/interview/videosend', formData,
           {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          }, 30000
+          }
         ).then((res) => {
           this.$swal({
             position: 'top-end',

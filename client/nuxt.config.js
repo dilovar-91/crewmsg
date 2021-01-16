@@ -95,8 +95,8 @@ module.exports = {
   },
 
   build: {
-    extractCSS: true,
-    standalone: true
+    analyze: true,
+    extractCSS: true
   },
 
   buildModules: [
@@ -106,6 +106,7 @@ module.exports = {
   ],
 
   vuetify: {
+    treeShake: true,
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
