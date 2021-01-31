@@ -101,14 +101,13 @@ export default {
     item () {
       return this.$store.state.interview.interview
     },
-
-          videoOptions () {
+    videoOptions () {
             return {
             autoplay: true,
             controls: true,
             sources: [
               {
-                src: 'http://crew-nuxt/videos/' + this.item.feedback.video,
+                src: '/videos/' + this.item.feedback.video,
                 type: 'video/mp4'
               }
             ]

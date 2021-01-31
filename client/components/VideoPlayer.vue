@@ -1,12 +1,12 @@
 <template>
   <div>
-    <video ref="videoPlayer" class="video-js" />
+    <video id="myVideo" ref="videoPlayer" class="video-js vjs-default-skin" />
   </div>
 </template>
 
 <script>
 import videojs from 'video.js'
-
+import 'video.js/dist/video-js.css'
 export default {
   name: 'VideoPlayer',
   props: {
@@ -34,3 +34,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+#myVideo {
+  background-color: #95DDF5;
+}
+</style>
