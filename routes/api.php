@@ -42,6 +42,7 @@ Route::group(['middleware' => 'guest:api'], function () {
 });
 Route::get('interview/{id}/questions', 'Sailor\InterviewController@getInterview');
 Route::get('user/{id}/interviews', 'Sailor\InterviewController@getUserInterviews');
+Route::get('seamen/interview/feedback/{id}/{user_id}', 'Seamen\FeedbackController@getFeedback');
 Route::post('/seamen/interview/videosend', [
     'uses' => 'Seamen\InterviewController@videosend',
     'as' => 'seamen.interview.videosend'

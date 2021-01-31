@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export const state = () => ({
   interview: {},
+  feedback: {},
   interviews: [],
   employerInterviews: [],
   questions: []
@@ -9,6 +10,7 @@ export const state = () => ({
 
 export const getters = {
   interview: state => state.interview,
+  feedback: state => state.feedback,
   interviews: state => state.interviews,
   employerInterviews: state => state.employerInterviews,
   questions: state => state.questions
@@ -17,6 +19,9 @@ export const getters = {
 export const mutations = {
   SET_INTERVIEW (state, interview) {
     state.interview = interview
+  },
+  SET_FEEDBACK (state, feedback) {
+    state.feedback = feedback
   },
   SET_INTERVIEWS (state, interviews) {
     state.interviews = interviews
@@ -36,6 +41,18 @@ export const actions = {
       axios.get(`user/${userId}/interviews`)
         .then((response) => {
           commit('SET_INTERVIEWS', response.data)
+          resolve(response)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
+  fetchFeedback ({ commit }, { interviewId, userId }) {
+    return new Promise((resolve, reject) => {
+      axios.get('seamen/interview/feedback/' + interviewId + '/' + userId)
+        .then((response) => {
+          commit('SET_FEEDBACK', response.data)
           resolve(response)
         })
         .catch((error) => {

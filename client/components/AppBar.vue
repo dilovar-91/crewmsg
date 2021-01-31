@@ -21,6 +21,9 @@
           >
             {{ item.title }}
           </v-tab>
+          <v-tab v-if="user" :to="'/'+user.role">
+            {{ user.name }}
+          </v-tab>
         </v-tabs>
       </div>
       <LocaleDropdown />
@@ -33,6 +36,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'HomeAppBar',
   components: {
@@ -63,7 +68,10 @@ export default {
           route: 'contact'
         }
       ]
-    }
+    },
+    ...mapGetters({
+      user: 'auth/user'
+    })
   }
 }
 </script>

@@ -119,7 +119,7 @@ export default {
     drawer: null,
     appName: process.env.appName,
     items: [
-      { icon: 'mdi-home', text: 'Главная', url: 'test' },
+      { icon: 'mdi-home', text: 'Главная', url: '' },
 
       {
         icon: 'mdi-briefcase',

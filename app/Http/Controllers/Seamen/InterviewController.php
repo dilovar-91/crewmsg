@@ -63,9 +63,10 @@ class InterviewController extends Controller
         $filename = time() . "_". uniqid();
         Storage::disk('public')
             ->put('videos/'.$filename.'.webm', file_get_contents($request->file));
-        
+
         $feedback = new Feedback();
         $feedback->invite_id = $request->invite_id;
+        $feedback->interview_id = $request->interview_id;
         $feedback->user_id = $request->user_id;
         $feedback->video = $filename.'.mp4';
         $feedback->comment = $request->comment ?? '';

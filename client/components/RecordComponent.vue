@@ -25,6 +25,7 @@
         :current-question="questions[index]"
         :increment="increment"
         :invite-id="inviteId"
+        :interview-id="interviewId"
         :next="next"
         :start="true"
         :title="title"
@@ -57,6 +58,10 @@ export default {
       required: true
     },
     inviteId: {
+      type: Number,
+      required: true
+    },
+    interviewId: {
       type: Number,
       required: true
     }

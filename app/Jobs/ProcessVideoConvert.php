@@ -29,12 +29,17 @@ class ProcessVideoConvert implements ShouldQueue
     public function handle()
     {
         $feedback = $this->feedback;
+        $str= Feedback::find($feedback->id);
         $file = substr($feedback->video, 0, -4);
-        FFMpeg::fromDisk('public')
+        if (FFMpeg::fromDisk('public')
             ->open('videos/'.$file.'.webm')
             ->export()
             ->toDisk('public')
             ->inFormat(new FFMpeg\Format\Video\X264('libmp3lame', 'libx264'))
-            ->save('videos/'.$feedback->video);
+            ->save('videos/'.$feedback->video)) {
+            $str->converted = true;
+            $str->save();
+        }
+
     }
 }

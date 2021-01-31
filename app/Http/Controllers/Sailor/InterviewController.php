@@ -11,7 +11,7 @@ class InterviewController extends Controller
 {
     public function getInterview($interview_id)
     {
-        $interview = Interview::with(['questions', 'user', 'questions.answer'])->where('id', $interview_id)->first();
+        $interview = Interview::with(['questions', 'user', 'feedback'])->where('id', $interview_id)->first();
         return response()->json($interview, 201);
     }
 

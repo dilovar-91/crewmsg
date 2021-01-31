@@ -46,6 +46,7 @@
             </v-col>
             <v-col cols="3" sm="12">
               <v-chip
+                v-if="false"
                 color="success"
                 outlined
               >
@@ -93,6 +94,10 @@ export default {
       required: true
     },
     inviteId: {
+      type: Number,
+      required: true
+    },
+    interviewId: {
       type: Number,
       required: true
     }
@@ -152,8 +157,6 @@ export default {
       if (time === 0) {
         this.stopTimer()
         if ((this.questionNumber + 1) < this.total) {
-          console.log(this.questionNumber + '-' + this.total)
-          // this.player.record().pause()
           this.expand = false
         }
         setTimeout(() => {
@@ -183,16 +186,16 @@ export default {
     this.player.on('startRecord', () => {
       // this.player.record().getDevice();
       this.startTimer()
-      console.log('started recording!', this.player.recordedData)
+      console.log('started recording!')
     })
     this.player.on('pauseRecord', function () {
-      console.log('pause recording', this.player.recordedData)
+      console.log('pause recording')
     })
     this.player.on('resumeRecord', function () {
-      console.log('resume recording', this.player.recordedData)
+      console.log('resume recording')
     })
     this.player.on('stopRecord', function () {
-      console.log('stopped recording', this.player.recordedData)
+      console.log('stopped recording')
     })
     this.player.on('finishRecord', function () {
       // the blob object contains the recorded data that
@@ -234,7 +237,6 @@ export default {
       if (this.questionNumber < this.total) {
         this.expand = true
         this.next()
-        // this.player.record().resume()
         this.isRecorded = false
         this.currentTime = this.currentQuestion.time
         this.startTimer()
@@ -246,6 +248,7 @@ export default {
         console.log(blobSend)
         formData.append('file', blobSend, blobSend.name)
         formData.append('invite_id', this.inviteId)
+        formData.append('interview_id', this.interviewId)
         formData.append('user_id', this.userId)
         console.log(formData)
         axios.post('/seamen/interview/videosend', formData,

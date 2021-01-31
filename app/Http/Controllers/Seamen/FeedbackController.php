@@ -33,6 +33,11 @@ class FeedbackController extends Controller
         dd($feedback);
         return view('seamen.feedback-detail')->with(array('feedback'=>$feedback)); 
     }
+    public function getFeedback($id, $user_id)
+    {
+        $feedback = Feedback::with(['user', 'invite.interview',])->where('id', $id)->where('user_id', $user_id)->first();
+        return response()->json($feedback, 200);
+    }
     public function answers($id)
     {
        

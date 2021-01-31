@@ -43,12 +43,14 @@
             >
               {{ $t('forgot_password') }}
             </router-link>
+
             <v-spacer />
+
             <v-btn
               :disabled="!valid"
               color="primary"
-              class="mt-0"
-              :loading="form.busy"
+              class="mt-n3"
+              :loading="loading"
               form="login-form"
               @click="login()"
             >
@@ -56,6 +58,20 @@
             </v-btn>
             <login-with-github />
           </v-card-actions>
+          <p>
+            <router-link
+              :to="{ name: 'register' }"
+              class="ml-2 mb-6"
+            >
+              {{ $t('register') }}
+            </router-link>
+            <router-link
+              :to="{ name: 'home' }"
+              class="ml-2 mb-6"
+            >
+              {{ $t('home') }}
+            </router-link>
+          </p>
         </v-form>
 
         <v-snackbar
@@ -89,6 +105,7 @@ export default {
   },
 
   data: () => ({
+    loading: false,
     form: new Form({
       email: '',
       password: ''
@@ -112,6 +129,7 @@ export default {
   methods: {
     async login () {
       let data
+      this.loading = true
 
       // Submit the form.
       try {
@@ -141,11 +159,12 @@ export default {
 
       // Redirect home.
       this.$router.push('/' + (data.role || '')).catch((error) => {
-        if (error.name != 'NavigationDuplicated') {
+        if (error.name !== 'NavigationDuplicated') {
           throw error
         }
         console.log(error)
       })
+      this.loading = false
     },
 
     showSnack (type, text) {
