@@ -9,7 +9,7 @@
             </v-col>
 
             <v-col cols="12" md="3">
-              <base-info-card title="Contact" />
+              <base-info-card :title="$t('contact')" />
 
               <base-business-contact dense />
             </v-col>
@@ -30,13 +30,12 @@
 
 <script>
 export default {
-  name: "SectionBusinessInfo",
-
+  name: 'SectionBusinessInfo',
   components: {
-    InfoFeatures: () => import("@/components/InfoFeatures"),
-    Instagram: () => import("@/components/Instagram"),
-  },
-};
+    InfoFeatures: () => import('~/components/InfoFeatures'),
+    Instagram: () => import('~/components/Instagram')
+  }
+}
 </script>
 
 <style lang="sass">

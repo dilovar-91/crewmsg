@@ -36,27 +36,31 @@ export default {
   name: 'HomeFooter',
 
   data: () => ({
-    socials: [
-      {
-        name: 'Facebook',
-        link: 'https://www.facebook.com/oneclickmarine'
-      },
-      {
-        name: 'Instagram',
-        link: 'https://www.instagram.com/oneclick_marine/'
-      },
-      {
-        name: 'Telegram',
-        link: 'https://t.me/oneclickmarine'
-      },
-      {
-        name: 'LinkedIn',
-        link: 'https://www.linkedin.com/company/oneclickmarine/'
-      }
 
-    ]
+  }),
+  computed: {
+    socials () {
+      return [
+        {
+          name: this.$t('facebook'),
+          link: 'https://www.facebook.com/oneclickmarine'
+        },
+        {
+          name: this.$t('instagram'),
+          link: 'https://www.instagram.com/oneclick_marine/'
+        },
+        {
+          name: this.$t('telegram'),
+          link: 'https://t.me/oneclickmarine'
+        },
+        {
+          name: this.$t('linkedin'),
+          link: 'https://www.linkedin.com/company/oneclickmarine/'
+        }
 
-  })
+      ]
+    }
+  }
 }
 </script>
 

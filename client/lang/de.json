@@ -40,13 +40,21 @@
   "for_sailors": "Für Segler",
   "for_companies": "Für Unternehmen",
   "contact": "Kontakte",
+  "about_us": "Über uns",
+  "features": "Eigenschaften",
+  "facebook": "Facebook",
+  "instagram": "Instagram",
+  "telegram": "Telegram",
+  "linkedin": "LinkedIn",
+  "more_info": "Mehr Info",
+  "copyright_text": "OneClick Marine ist für Seeleute und Besatzungsunternehmen. Fügen Sie bei Verwendung des Site-Materials einen aktiven Link hinzu. Ihre persönlichen Daten sind geschützt.",
   "seamen": {
     "vacancy": "freie Stelle"
   },
   "home_page": {
     "home": "Startseite",
     "for_companies": "Für Unternehmen",
-    "for_sailors": "für Meeresfrüchte",
+    "for_sailors": "Für Meeresfrüchte",
     "home_description": "SCHNELLER START IHRER KARRIERE AM MEER",
     "hero_title": "Beginnen Sie Ihre Marinekarriere mit einem Klick",
     "hero_description": "Dies ist eine einfache und effektive Möglichkeit, ein Interview zu führen und gleichzeitig die meisten Informationen über den Bewerber zu erhalten. Probieren Sie es aus! Der Dienst hat viel Arbeit, um einen Erfahrungsschatz mit einer Tradition der Innovation zu verbinden bietet professionelle Besatzung in einem erstklassigen Zustand. ",
@@ -85,17 +93,17 @@
       "button": "Kontaktiere uns"
     },
     "keep_in_touch": {
-      "title": "KEEP IN TOUCH WITH US",
-      "description": "We are in touch. Use any convenient messenger for you. Our manager is always in touch and will answer any question that interests you.",
+      "title": "Bleiben Sie in Kontakt mit uns",
+      "description": "Wir sind in Kontackt. Verwenden Sie einen beliebigen praktischen Messenger für Sie. Unser Manager ist immer in Kontakt und beantwortet alle Fragen, die Sie interessieren.",
       "address": "Ukraine, Odessa",
       "phone": "+380 (93) 510 18 02",
       "email": "info@oneclickmarine.com",
-      "mail_us": "MAIL US YOUR MESSAGE",
+      "mail_us": "MAILEN SIE UNS IHRE NACHRICHT",
       "name": "Name",
       "your_email": "Email",
-      "subject": "Subject",
-      "message": "Message",
-      "send": "Send message"
+      "subject": "Gegenstand",
+      "message": "Botschaft",
+      "send": "Nachricht senden"
     },
     "feature_comparison": {
       "title": "OneClick Pro",

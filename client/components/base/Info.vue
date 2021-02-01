@@ -20,14 +20,11 @@
       />
 
       <base-body>
-        OneClick Marine is  for seamen and crewing companies.
-        When using the site material add an active link.
-
-        Your personal data is protected.
+        {{ $t('copyright_text') }}
       </base-body>
 
       <v-btn class="mb-4" color="primary" to="/about">
-        More Info
+        {{ $t('more_info') }}
       </v-btn>
     </div>
   </v-theme-provider>

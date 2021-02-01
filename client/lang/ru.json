@@ -40,6 +40,14 @@
   "for_sailors": "Морякам",
   "for_companies": "Компаниям",
   "contact": "Контакты",
+  "about_us": "О Нас",
+  "features": "Страницы",
+  "facebook": "Фейсбук",
+  "instagram": "Инстаграм",
+  "telegram": "Телеграм",
+  "linkedin": "Линкедин",
+  "more_info": "Больше информации",
+  "copyright_text": "OneClick Marine предназначен для моряков и крюинговых компаний. При использовании материалов сайта добавляйте активную ссылку. Ваши личные данные защищены.",
   "seamen": {
     "vacancy": "Вакансии"
   },
@@ -68,16 +76,16 @@
 
     },
     "why_choose_us": {
-      "title": "Why Choose Us?",
-      "description": "Our portal helps seafarers find vacancies, and crewing companies select a crew for a ship, as well as an automated video interview with the candidate.",
-      "secure_platform": "Secure Platform",
-      "secure_platform_description": "OneClick Marine is the world’s foremost crewing company. A great deal of work needs to combine a wealth of experience with a tradition of innovation that provides professional crew manning in a first class condition.",
-      "easy_to_use": "Easy to Use",
-      "easy_to_use_description": "Our experience in marine shipping gives an unique insight into the insurance of sailors employment. We have a trusted reputation among our clients and partners.",
-      "creative_solutions": "Creative Solutions",
-      "creative_solutions_description": "We work globally but maintain a personal approach to each customer, providing you with complete assurance during our cooperation. Our team offer solutions for every aspect of your employment.",
-      "work_at_sea": "Work at sea",
-      "work_at_sea_description": "We understand that as well as being your passion, sea is a work. Our dedicated and professional team will ensure it always provides maximum return."
+      "title": "Почему выбирают нас?",
+      "description": "Наш портал помогает морякам находить вакансии, а крюинговые компании подбирать экипаж на корабль, а также проводит автоматизированное видео-интервью с кандидатом.",
+      "secure_platform": "Безопасная платформа",
+      "secure_platform_description": "OneClick Marine - ведущая крюинговая компания в мире. Необходимо проделать большую работу, чтобы объединить богатый опыт с традициями инноваций, которые обеспечивают первоклассное укомплектование профессиональных экипажей.",
+      "easy_to_use": "Простота в использовании",
+      "easy_to_use_description": "Наш опыт в морском судоходстве дает уникальное представление о страховании занятости моряков. Мы пользуемся заслуженной репутацией среди наших клиентов и партнеров.",
+      "creative_solutions": "Творческие решения",
+      "creative_solutions_description": "Мы работаем по всему миру, но сохраняем индивидуальный подход к каждому клиенту, обеспечивая вам полную уверенность во время нашего сотрудничества. Наша команда предлагает решения для каждого аспекта вашей работы.",
+      "work_at_sea": "Работа в море",
+      "work_at_sea_description": "Мы понимаем, что море - это не только ваша страсть, но и работа. Наша преданная своему делу и профессиональная команда всегда обеспечивает максимальную отдачу."
     },
     "contact_us": {
       "title": "ЕСТЬ ВОПРОСЫ? ДАЙТЕ НАМ ЗНАТЬ!",
