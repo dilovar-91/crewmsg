@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('{all}', function () {
+//Route::get('{all}', function () {
     //return file_get_contents(public_path('_nuxt/index.html'));
-    return abort(404);
-})->where('all', '^(?!videos).*$');
+    //return abort(404);
+//})->where('all', '^(?!videos).*$');
