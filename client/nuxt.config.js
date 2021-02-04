@@ -69,9 +69,9 @@ module.exports = {
   ],
   seo: {
     // Module options
-    baseUrl: 'https://oneclickmarine.com',
-    name: 'Name of site',
-    title: 'Lets finish it',
+    baseUrl: process.env.APP_URL,
+    name: 'OneClickMarine',
+    title: 'Lets do it together',
     templateTitle: '%name% - %title%',
     description: 'БЫСТРЫЙ СТАРТ ВАШЕЙ КАРЬЕРЫ В МОРЕ'
     // ...
