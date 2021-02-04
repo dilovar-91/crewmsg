@@ -64,8 +64,8 @@ module.exports = {
         confirmButtonColor: '#41b882',
         cancelButtonColor: '#ff7674'
       }
-    ]
-    // 'nuxt-i18n'
+    ],
+    '@nuxtjs/proxy'
   ],
   seo: {
     // Module options
@@ -84,16 +84,6 @@ module.exports = {
       fallbackLocale: 'en'
     }
   },
-
-  proxy: {
-    '/api': {
-      target: 'http://test',
-      pathRewrite: {
-        '^/api': '/'
-      }
-    }
-  },
-
   build: {
     analyze: true,
     extractCSS: false
@@ -116,6 +106,14 @@ module.exports = {
         accent: '#204165'
       }
 
+    }
+  },
+  proxy: {
+    '/videos': {
+      target: process.env.apiUrl,
+      pathRewrite: {
+        '^/videos': '/videos'
+      }
     }
   },
 

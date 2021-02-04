@@ -5,7 +5,9 @@
         <v-col cols="12" md="6">
           <div class="d-flex flex-wrap justify-md-start justify-center justify-md-none">
             <template v-for="(s, i) in socials">
-              <a :key="s" class="white--text pa-1 pa-md-0" :href="s.link" target="_blank" v-text="s.name" />
+              <a :key="s" class="pa-1 pa-md-0" :href="s.link" target="_blank">
+                <v-icon :color="'green'">{{ s.icon }}</v-icon>
+              </a>
 
               <v-responsive
                 v-if="i < socials.length - 1"
@@ -42,20 +44,24 @@ export default {
     socials () {
       return [
         {
-          name: this.$t('facebook'),
-          link: 'https://www.facebook.com/oneclickmarine'
+          icon: 'mdi-facebook',
+          link: 'https://www.facebook.com/oneclickmarine',
+          color: '#3b5998'
         },
         {
-          name: this.$t('instagram'),
-          link: 'https://www.instagram.com/oneclick_marine/'
+          icon: 'mdi-instagram',
+          link: 'https://www.instagram.com/oneclick_marine/',
+          color: '#ffc273'
         },
         {
-          name: this.$t('telegram'),
-          link: 'https://t.me/oneclickmarine'
+          icon: 'mdi-telegram',
+          link: 'https://t.me/oneclickmarine',
+          color: '#0088CC'
         },
         {
-          name: this.$t('linkedin'),
-          link: 'https://www.linkedin.com/company/oneclickmarine/'
+          icon: 'mdi-linkedin',
+          link: 'https://www.linkedin.com/company/oneclickmarine/',
+          color: '#007bb6'
         }
 
       ]
