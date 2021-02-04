@@ -13,4 +13,4 @@
 Route::get('{all}', function () {
     //return file_get_contents(public_path('_nuxt/index.html'));
     return abort(404);
-})->where('all', '^(?!api).*$');
+})->where('all', '^(?!videos).*$');

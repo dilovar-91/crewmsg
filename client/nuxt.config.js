@@ -110,7 +110,7 @@ module.exports = {
   },
   proxy: {
     '/videos': {
-      target: process.env.APP_URL,
+      target: process.env.apiUrl,
       pathRewrite: {
         '^/videos': '/videos'
       }

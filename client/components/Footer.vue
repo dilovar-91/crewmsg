@@ -6,7 +6,7 @@
           <div class="d-flex flex-wrap justify-md-start justify-center justify-md-none">
             <template v-for="(s, i) in socials">
               <a :key="s" class="pa-1 pa-md-0" :href="s.link" target="_blank">
-                <v-icon :color="'green'">{{ s.icon }}</v-icon>
+                <v-icon :color="s.color">{{ s.icon }}</v-icon>
               </a>
 
               <v-responsive
