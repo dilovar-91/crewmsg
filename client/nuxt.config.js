@@ -69,7 +69,7 @@ module.exports = {
   ],
   seo: {
     // Module options
-    baseUrl: 'https://crewmsg.com.ua',
+    baseUrl: 'https://oneclickmarine.com',
     name: 'Name of site',
     title: 'Lets finish it',
     templateTitle: '%name% - %title%',
