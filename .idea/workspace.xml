@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="71d552d7-6647-4375-a994-b98ad6c2b594" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/videos/1616311860_6056f6346726d.webm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1616312549_6056f8e557d53.webm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1616313311_6056fbdf7c33f.webm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1616313494_6056fc964d8b2.webm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1616313613_6056fd0d28750.webm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1616314760_60570188af7d9.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1616314760_60570188af7d9.webm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/RecordAnswer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RecordAnswer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/RecordComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RecordComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/VideoPlayer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/VideoPlayer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/seamen/record.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/seamen/record.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/videos/1609862225_5ff48c5180954.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/vendor/alchemy/binary-driver" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/pbmedia/laravel-ffmpeg" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/php-ffmpeg/php-ffmpeg" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/neutron/temporary-filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1jy7KS9pQIqzFWzaIPkKHWwMt9h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/pages/auth" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+    <property name="vuejs.nuxt.types-notification-shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\crew-nuxt\client\pages\auth" />
+      <recent name="D:\OSPanel\domains\crew-nuxt\client\pages\employer" />
+      <recent name="D:\OSPanel\domains\crew-nuxt\client\store" />
+      <recent name="D:\OSPanel\domains\crew-nuxt\client\pages\seamen" />
+      <recent name="D:\OSPanel\domains\crew-nuxt\client\components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="71d552d7-6647-4375-a994-b98ad6c2b594" name="Default Changelist" comment="" />
+      <created>1604764418480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604764418480</updated>
+      <workItem from="1604764425710" duration="2920000" />
+      <workItem from="1604767727557" duration="5031000" />
+      <workItem from="1604991248272" duration="2931000" />
+      <workItem from="1605276898108" duration="12597000" />
+      <workItem from="1605519878267" duration="15727000" />
+      <workItem from="1605729832859" duration="5455000" />
+      <workItem from="1605816931668" duration="9323000" />
+      <workItem from="1605884407158" duration="1929000" />
+      <workItem from="1606028363286" duration="32689000" />
+      <workItem from="1606482642540" duration="19144000" />
+      <workItem from="1606978584840" duration="645000" />
+      <workItem from="1606979658861" duration="41329000" />
+      <workItem from="1607335803412" duration="1902000" />
+      <workItem from="1607774121446" duration="4687000" />
+      <workItem from="1608364897478" duration="7798000" />
+      <workItem from="1609052602437" duration="2832000" />
+      <workItem from="1609663795672" duration="21961000" />
+      <workItem from="1610221214952" duration="4884000" />
+      <workItem from="1610709037175" duration="4171000" />
+      <workItem from="1610808602755" duration="9365000" />
+      <workItem from="1611124578422" duration="8000" />
+      <workItem from="1611157166667" duration="45798000" />
+      <workItem from="1615840521189" duration="78000" />
+      <workItem from="1615841017488" duration="1827000" />
+      <workItem from="1616274660654" duration="14889000" />
+    </task>
+    <task id="LOCAL-00001" summary="finished record">
+      <created>1606054505893</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606054505893</updated>
+    </task>
+    <task id="LOCAL-00002" summary="changed spa to universal route++">
+      <created>1606113938960</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606113938960</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added some landing text with translation">
+      <created>1606232413116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606232413166</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finished create interview-create.vue">
+      <created>1607010746944</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607010746944</updated>
+    </task>
+    <task id="LOCAL-00005" summary="finished create vacancy">
+      <created>1607096933648</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607096933648</updated>
+    </task>
+    <task id="LOCAL-00006" summary="some changes">
+      <created>1609664303627</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609664303627</updated>
+    </task>
+    <task id="LOCAL-00007" summary="removed custom loading">
+      <created>1609665031005</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609665031005</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixed job bug">
+      <created>1609858701232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609858701232</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added console.log">
+      <created>1609859494642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609859494642</updated>
+    </task>
+    <task id="LOCAL-00010" summary="addde dispose before save">
+      <created>1609860386094</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609860386094</updated>
+    </task>
+    <task id="LOCAL-00011" summary="log log">
+      <created>1609861137183</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609861137183</updated>
+    </task>
+    <task id="LOCAL-00012" summary="log log">
+      <created>1609873636259</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609873636259</updated>
+    </task>
+    <task id="LOCAL-00013" summary="&#10;videoMimeType: 'video/webm;codecs=vp8,opus',">
+      <created>1610027766585</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610027766585</updated>
+    </task>
+    <task id="LOCAL-00014" summary="spa">
+      <created>1610029864867</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610029864867</updated>
+    </task>
+    <task id="LOCAL-00015" summary="universal">
+      <created>1610030301014</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610030301014</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added log to all event">
+      <created>1610707721928</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610707721928</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added log to all event">
+      <created>1610708035986</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610708035986</updated>
+    </task>
+    <task id="LOCAL-00018" summary="removed pause and resume on video RecordAnswer.vue">
+      <created>1610714083895</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610714083895</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add ressponse">
+      <created>1610715024064</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610715024064</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add ressponse">
+      <created>1610715208143</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610715208143</updated>
+    </task>
+    <task id="LOCAL-00021" summary="git commit">
+      <created>1610811330837</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1610811330837</updated>
+    </task>
+    <task id="LOCAL-00022" summary="formData">
+      <created>1610828271544</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1610828271544</updated>
+    </task>
+    <task id="LOCAL-00023" summary="more changes">
+      <created>1612129858564</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612129858564</updated>
+    </task>
+    <task id="LOCAL-00024" summary="changed video url">
+      <created>1612130241920</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1612130241920</updated>
+    </task>
+    <task id="LOCAL-00025" summary="finished home page">
+      <created>1612213342087</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612213342088</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="finished record" />
+    <MESSAGE value="changed spa to universal route" />
+    <MESSAGE value="added some landing text with translation" />
+    <MESSAGE value="finished create interview-create.vue" />
+    <MESSAGE value="finished create vacancy" />
+    <MESSAGE value="some changes" />
+    <MESSAGE value="removed custom loading" />
+    <MESSAGE value="fixed job bug" />
+    <MESSAGE value="added console.log" />
+    <MESSAGE value="addde dispose before save" />
+    <MESSAGE value="log log" />
+    <MESSAGE value="&#10;videoMimeType: 'video/webm;codecs=vp8,opus'," />
+    <MESSAGE value="spa" />
+    <MESSAGE value="universal" />
+    <MESSAGE value="added log to all event" />
+    <MESSAGE value="removed pause and resume on video RecordAnswer.vue" />
+    <MESSAGE value="add ressponse" />
+    <MESSAGE value="git commit" />
+    <MESSAGE value="formData" />
+    <MESSAGE value="more changes" />
+    <MESSAGE value="changed video url" />
+    <MESSAGE value="finished home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished home page" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="551" y="256" key="#ESLint" timestamp="1604768092674">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="551" y="256" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1604768092674" />
+    <state x="428" y="188" key="#Notifications" timestamp="1607007112195">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="428" y="188" key="#Notifications/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607007112195" />
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604770160040">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604770160040" />
+    <state x="437" y="233" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1604767657512">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="437" y="233" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1604767657512" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607004610962">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607004610962" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1610708028805">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1610708028805" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1605774103629">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1605774103629" />
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604767651749" />
+    <state x="-4" y="55" width="1345" height="618" key="MergeDialog" timestamp="1610707857676">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-4" y="55" width="1345" height="618" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1610707857676" />
+    <state x="321" y="125" width="932" height="477" key="MultipleFileMergeDialog" timestamp="1610707857704">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="321" y="125" width="932" height="477" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1610707857704" />
+    <state x="507" y="66" key="RollbackChangesDialog" timestamp="1611694782436">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="507" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1611694782436" />
+    <state x="173" y="18" key="SettingsEditor" timestamp="1606200810828">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="173" y="18" key="SettingsEditor/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606200810828" />
+    <state x="173" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604770504752" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1612213346602">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607096936868" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606232499187" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612213346602" />
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1608375785634">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607096899516" />
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606204666076" />
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1608375785634" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1610027268129">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606201586425" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610027268129" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607094566980">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607094566980" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606052908419" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/pages/companies.vue</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
