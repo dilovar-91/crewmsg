@@ -33,28 +33,18 @@
         v-show="!isFinished"
         class="mx-auto mt-0"
       >
-        <video id="myVideo" class="video-js vjs-default-skin" height="200px" playsinline />
-
-        <v-card-title transition="slide-x-transition" class="py-0">
-          <v-row>
-            <v-col cols="9" sm="12">
+        <div class="video-container">
+          <video id="myVideo" class="video-js vjs-default-skin" height="200px" playsinline />
+          <div class="overlay-desc">
+            <div class="overlay">
               <v-expand-transition>
-                <h5 v-show="expand">
+                <h1 v-show="expand">
                   Вопрос № {{ (questionNumber + 1) }}: {{ currentQuestion.question }}
-                </h5>
+                </h1>
               </v-expand-transition>
-            </v-col>
-            <v-col cols="3" sm="12">
-              <v-chip
-                v-if="false"
-                color="success"
-                outlined
-              >
-                {{ currentTime }} из {{ currentQuestion.time }}
-              </v-chip>
-            </v-col>
-          </v-row>
-        </v-card-title>
+            </div>
+          </div>
+        </div>
       </v-card>
     </v-col>
     <v-col v-show="!isFinished" cols="12" sm="12" md="6" class="justify-content-center">
@@ -335,6 +325,45 @@ export default {
 }
 
 #myVideo {
-  background-color: #95DDF5;
+  background-color: #95ddf5;
+}
+.video-container {
+  position: relative;
+}
+video {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+.overlay-desc {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 35px; left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+h1 {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+}
+.overlay{
+  width:100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
+p {
+  color: white;
+  font-size:12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 </style>

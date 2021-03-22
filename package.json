@@ -30,6 +30,7 @@
     "sweetalert2": "^8.19.0",
     "vform": "^1.0.1",
     "video.js": "^7.10.2",
+    "videojs-overlay": "^2.1.4",
     "videojs-record": "^4.1.1",
     "vue-i18n": "^8.22.2",
     "vue-quill-editor": "^3.0.6",

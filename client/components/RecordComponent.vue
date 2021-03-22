@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import RecordAnswer from '@/components/RecordAnswer.vue'
+import RecordAnswer from '~/components/RecordAnswer.vue'
 
 export default {
   components: {

@@ -20,7 +20,7 @@
     <v-container v-if="item && item.feedback !==null">
       <v-row>
         <v-col cols="12" sm="12" md="7" xl="7">
-          <video-player :options="videoOptions" />
+          <video-player :options="videoOptions" :questions="item.questions" />
         </v-col>
         <v-col cols="12" sm="12" md="5" xl="5">
           <v-list two-line>
@@ -105,15 +105,23 @@ export default {
             return {
             autoplay: true,
             controls: true,
+            controlBar: {
+                volumePanel: false,
+                fullscreenToggle: false,
+                pip: false,
+                deviceButton: false,
+                recordIndicator: true,
+                cameraButton: false,
+                recordToggle: false
+              },
             sources: [
               {
-                src: '/videos/' + this.item.feedback.video,
+                src: 'http://crew-nuxt/videos/' + this.item.feedback.video,
                 type: 'video/mp4'
               }
             ]
           }
         }
-
   },
   async fetch ({ store, params: { id } }) {
     await store.dispatch('interview/fetchInterview', { id })
