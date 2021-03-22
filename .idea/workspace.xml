@@ -26,21 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d552d7-6647-4375-a994-b98ad6c2b594" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/videos/1616311860_6056f6346726d.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1616312549_6056f8e557d53.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1616313311_6056fbdf7c33f.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1616313494_6056fc964d8b2.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1616313613_6056fd0d28750.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1616314760_60570188af7d9.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1616314760_60570188af7d9.webm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/RecordAnswer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RecordAnswer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/RecordComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RecordComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/VideoPlayer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/VideoPlayer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/seamen/record.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/seamen/record.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/videos/1609862225_5ff48c5180954.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -498,76 +485,6 @@
     <MESSAGE value="changed video url" />
     <MESSAGE value="finished home page" />
     <option name="LAST_COMMIT_MESSAGE" value="finished home page" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="551" y="256" key="#ESLint" timestamp="1604768092674">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="551" y="256" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1604768092674" />
-    <state x="428" y="188" key="#Notifications" timestamp="1607007112195">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="428" y="188" key="#Notifications/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607007112195" />
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604770160040">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604770160040" />
-    <state x="437" y="233" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1604767657512">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="437" y="233" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1604767657512" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607004610962">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607004610962" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1610708028805">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1610708028805" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1605774103629">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1605774103629" />
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604767651749" />
-    <state x="-4" y="55" width="1345" height="618" key="MergeDialog" timestamp="1610707857676">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="-4" y="55" width="1345" height="618" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1610707857676" />
-    <state x="321" y="125" width="932" height="477" key="MultipleFileMergeDialog" timestamp="1610707857704">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="321" y="125" width="932" height="477" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1610707857704" />
-    <state x="507" y="66" key="RollbackChangesDialog" timestamp="1611694782436">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="507" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1611694782436" />
-    <state x="173" y="18" key="SettingsEditor" timestamp="1606200810828">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="173" y="18" key="SettingsEditor/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606200810828" />
-    <state x="173" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604770504752" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1612213346602">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607096936868" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606232499187" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612213346602" />
-    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1608375785634">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607096899516" />
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606204666076" />
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1608375785634" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1610027268129">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1606201586425" />
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610027268129" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607094566980">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1607094566980" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606052908419" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

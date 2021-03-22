@@ -116,7 +116,7 @@ export default {
               },
             sources: [
               {
-                src: 'http://crew-nuxt/videos/' + this.item.feedback.video,
+                src: '/videos/' + this.item.feedback.video,
                 type: 'video/mp4'
               }
             ]
