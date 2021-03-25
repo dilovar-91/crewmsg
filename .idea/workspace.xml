@@ -27,7 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="71d552d7-6647-4375-a994-b98ad6c2b594" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/seamen/record.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/seamen/record.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +173,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/pages/auth" />
@@ -248,6 +251,9 @@
       <workItem from="1615840521189" duration="78000" />
       <workItem from="1615841017488" duration="1827000" />
       <workItem from="1616274660654" duration="14889000" />
+      <workItem from="1616517056899" duration="1555000" />
+      <workItem from="1616573754467" duration="261000" />
+      <workItem from="1616689163125" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="finished record">
       <created>1606054505893</created>
@@ -424,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612213342088</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="remove localhost url">
+      <created>1616432766430</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1616432766430</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +497,8 @@
     <MESSAGE value="more changes" />
     <MESSAGE value="changed video url" />
     <MESSAGE value="finished home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished home page" />
+    <MESSAGE value="remove localhost url" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove localhost url" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

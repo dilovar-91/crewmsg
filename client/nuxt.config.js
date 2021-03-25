@@ -108,14 +108,6 @@ module.exports = {
 
     }
   },
-  proxy: {
-    '/videos': {
-      target: process.env.apiUrl,
-      pathRewrite: {
-        '^/videos': '/videos'
-      }
-    }
-  },
 
   hooks: {
     generate: {

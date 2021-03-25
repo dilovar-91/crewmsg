@@ -22,48 +22,6 @@
         <v-col cols="12" sm="12" md="7" xl="7">
           <video-player :options="videoOptions" :questions="item.questions" />
         </v-col>
-        <v-col cols="12" sm="12" md="5" xl="5">
-          <v-list two-line>
-            <v-list-item-group
-              v-model="selected"
-              active-class="pink--text"
-              multiple
-            >
-              <template v-for="(row, index) in item.questions">
-                <v-list-item :key="row.id">
-                  <template v-slot:default="{ active }">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="row.question" />
-
-                      <v-list-item-subtitle
-                        class="text--primary"
-                        v-text="row.question"
-                      />
-
-                      <v-list-item-subtitle v-text="row.question" />
-                    </v-list-item-content>
-
-                    <v-list-item-action>
-                      <v-list-item-action-text v-text="row.time + ' мин' " />
-
-                      <v-icon
-
-                        color="yellow darken-3"
-                      >
-                        mdi-comment-question-outline
-                      </v-icon>
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-
-                <v-divider
-                  v-if="index < item.questions.length - 1"
-                  :key="index"
-                />
-              </template>
-            </v-list-item-group>
-          </v-list>
-        </v-col>
       </v-row>
     </v-container>
     <v-container v-else>
@@ -116,7 +74,7 @@ export default {
               },
             sources: [
               {
-                src: '/videos/' + this.item.feedback.video,
+                src: 'https://api.oneclickmarine.com/videos/' + this.item.feedback.video,
                 type: 'video/mp4'
               }
             ]
